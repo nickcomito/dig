@@ -1,0 +1,119 @@
+
+
+// STYLEGUIDE
+// These styles are only for this style guide's layout and examples. This does not affect the project styles.
+
+
+
+
+.atom, .molecule, .organism, .pattern, .color, .iconset, .animation {
+  @extend %margbot-5;
+}
+
+.color {
+	@extend %clear;
+	width: 100%;
+
+	&:after {
+		clear: both;
+		content: "";
+		display: table;
+	}
+}
+
+.circle {
+	@extend %bgcolor-primary;
+	border-radius: $scale4+rem;
+	box-sizing: border-box;
+	display: inline-block;
+	height: $scale4+rem;
+	width: $scale4+rem;
+	position: relative;
+}
+
+.scale-box {
+	@extend %margbot-2;
+	@extend %bgcolor-subtle-alt;
+	display: block;
+	width: 100%;
+
+	&.scale-6 { height: $scale-6+rem;	}
+	&.scale-5 { height: $scale-5+rem;	}
+	&.scale-4 { height: $scale-4+rem;	}
+	&.scale-3 { height: $scale-3+rem;	}
+	&.scale-2 { height: $scale-2+rem;	}
+	&.scale-1 { height: $scale-1+rem;	}
+	&.scale-b { height: $scale-b+rem;	}
+	&.scale1 { height: $scale1+rem;	}
+	&.scale1 { height: $scale1+rem;	}
+	&.scale2 { height: $scale2+rem;	}
+	&.scale3 { height: $scale3+rem;	}
+	&.scale4 { height: $scale4+rem;	}
+	&.scale5 { height: $scale5+rem;	}
+	&.scale6 { height: $scale6+rem;	}
+	&.scale7 { height: $scale7+rem;	}
+	&.scale8 { height: $scale8+rem;	}
+	&.scale9 { height: $scale9+rem;	}
+}
+
+.title {
+  border-bottom: 2px solid #f1f1f1;
+  color: #999;
+  display: block;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.swatch {
+	@extend %right;
+	//border: 1px solid #fff;
+	box-shadow: 0px 0px 10px 0 rgba(0,0,0,.2);
+	
+	height: $scale2+rem;
+	width: $scale1+rem;
+
+	&.main {
+		@extend %left;
+		box-shadow: none;
+		border: 0;
+		height: $scale8+rem;
+		width: $scale9+rem;
+	}
+
+	&.example {
+		@extend %left;
+		height: $scale2+rem;
+		margin-right: $scale-b+rem;
+		width: $scale9+rem;	
+	}
+}
+
+.variations {
+	clear: left;
+	@include break($media-md+px) {
+		clear: none;
+	}
+}
+
+#tutorial-overlay {
+	background: rgba(255,255,255,.8);
+	box-sizing: border-box;
+	height: 100%;
+	width: 100%;
+	padding: $scale4+rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	visibility: hidden;
+
+	&.visible {
+		visibility: visible;
+	}
+
+	.island {
+		margin: 0 auto;
+		width: 800px;
+	}
+}

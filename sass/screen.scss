@@ -1,0 +1,37 @@
+
+// SCREEN
+// Import all partials into one stylesheet for screens
+
+
+
+
+@import 
+
+"compass/reset",
+"compass/css3/images",
+
+// D.I.G. Setup
+"partials/_variables.scss",
+"partials/_color.scss",
+"partials/_utilities.scss",
+"partials/_grid.scss",
+"partials/_icons.scss",
+"partials/_type.scss",
+"partials/_styleguide.scss",
+
+// Project Components
+"partials/_atoms.scss",
+"partials/_molecules.scss",
+"partials/_organisms.scss",
+
+// Patterns
+"partials/patterns/_pattern_list-group.scss",
+"partials/patterns/_pattern_calendar.scss",
+"partials/patterns/_pattern_context-steps.scss",
+"partials/patterns/_pattern_progress-bar.scss",
+"partials/patterns/_pattern_blocks.scss",
+"partials/patterns/_pattern_login-form.scss",
+"partials/patterns/_pattern_popup.scss",
+
+// Pattern Overrides
+"partials/_override_progress-bar.scss";

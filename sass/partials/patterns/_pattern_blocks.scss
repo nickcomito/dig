@@ -1,0 +1,52 @@
+// Two Blocks
+// ----------
+
+
+.blocks {
+	width: 100%;
+
+	&:after {
+		clear: both;
+		content: "";
+		display: block;
+	}
+}
+
+.block {
+	@extend %padall-1;
+	box-sizing: border-box;
+	float: left;
+	margin: 1%;
+
+	&.subtle {
+		@extend %bgcolor-subtle-alt;
+	}
+
+	*:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.blocks.two {
+	.block {
+		width: 48%;
+	}
+}
+
+.blocks.three {
+	.block {
+		width: 98%;
+		@include break($media-md+px) {
+			width: 31.33334%;
+		}
+	}
+}
+
+.blocks.four {
+	.block {
+		width: 48%;
+		@include break($media-md+px) {
+			width: 23%;
+		}
+	}
+}

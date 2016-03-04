@@ -1,0 +1,160 @@
+
+// VARIABLES
+// Go nuts, but ye be warned: adjusting these will make sweeping site changes
+
+
+
+
+// PATHS
+// -----
+
+$img-path: "../images";
+$font-path: "/fonts";
+
+
+
+
+// FONTS
+// -----
+
+
+$font-primary: "palatino", georgia, serif;
+$font-secondary: "helvetica neue", helvetica, arial, sans-serif;
+$font-tertiary: $font-secondary;
+
+// Set the base (typically 16) to help with converting from em to px
+$base: 16;
+
+// Adjust the type hierarchy globally
+$globaltext-sm: 85%;
+$globaltext-md: 92%;
+$globaltext-lg: 90%;
+
+
+
+
+// BREAKPOINTS
+// -----------
+
+$media-sm: 360;
+$media-md: 720;
+$media-lg: 1080;
+$media-xl: 1440;
+
+
+
+
+// GRID
+// ----
+
+$max-width: $media-lg;
+$gutter: $base;
+
+
+
+
+// MISC
+// ----
+
+$rounded-1: 2;
+$rounded-2: 8;
+
+
+
+
+// ICONS
+// -----
+
+$icon-stroke-width: 10;
+
+
+
+
+// SCALE
+// -----
+
+// Create your own scales at modularscale.com
+$scale-6: .317;
+$scale-5: .422;
+$scale-4: .444;
+$scale-3: .563;
+$scale-2: .667;
+$scale-1: .75;
+$scale-b: 1; // Scale Base Unit (typically 16px)
+$scale1: 1.333;
+$scale2: 1.5;
+$scale3: 1.777;
+$scale4: 2.25;
+$scale5: 2.369;
+$scale6: 3.157;
+$scale7: 3.375;
+$scale8: 4.209;
+$scale9: 5.063;
+
+
+
+
+// COLOR
+// -----
+
+// Set all the colors here so we can loop through to create classes
+$project-colors: (
+	primary: #2ebe94,
+	secondary: #5F6062,
+	tertiary: #DBD4A3,
+	accent: #FF9D32,
+	accent-alt: #EA3C7B,
+	subtle: #D8E1E2,
+	subtle-alt: #D8E1E2,
+	dark: #575757,
+	medium: #929292,
+	light: #E2E2E2,
+	error: #CE3A4E,
+	highlight: #D4EB43,
+	info: #72BFDF,
+	success: #32B742,
+	warning: #CEA53A,
+	special: #8E3ACE,
+);
+
+
+// Create variables from the project-colors map because
+// SASS doesn't support variable interpolation in a loop :(
+
+// Brand
+$color-primary: map-get($project-colors, primary);
+$color-secondary: map-get($project-colors, secondary);
+$color-tertiary: map-get($project-colors, tertiary);
+$color-accent: map-get($project-colors, accent);
+$color-accent-alt: map-get($project-colors, accent-alt);
+$color-subtle: map-get($project-colors, subtle);
+$color-subtle-alt: map-get($project-colors, subtle-alt);
+$fill-primary: map-get($project-colors, primary);
+$fill-secondary: map-get($project-colors, secondary);
+$fill-tertiary: map-get($project-colors, tertiary);
+$fill-accent: map-get($project-colors, accent);
+$fill-accent-alt: map-get($project-colors, accent-alt);
+$fill-subtle: map-get($project-colors, subtle);
+$fill-subtle-alt: map-get($project-colors, subtle-alt);
+
+// Generic
+$color-dark: map-get($project-colors, dark);
+$color-medium: map-get($project-colors, medium);
+$color-light: map-get($project-colors, light);
+$fill-dark: map-get($project-colors, dark);
+$fill-medium: map-get($project-colors, medium);
+$fill-light: map-get($project-colors, light);
+
+// Functional
+$color-error: map-get($project-colors, error);
+$color-highlight: map-get($project-colors, highlight);
+$color-info: map-get($project-colors, info);
+$color-success: map-get($project-colors, success);
+$color-warning: map-get($project-colors, warning);
+$color-special: map-get($project-colors, special);
+$fill-error: map-get($project-colors, error);
+$fill-highlight: map-get($project-colors, highlight);
+$fill-info: map-get($project-colors, info);
+$fill-success: map-get($project-colors, success);
+$fill-warning: map-get($project-colors, warning);
+$fill-special: map-get($project-colors, special);

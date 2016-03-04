@@ -1,0 +1,31 @@
+
+// Progress Bar (override default pattern)
+// ---------------------------------------
+
+
+.progress-bar {
+	@extend %bgcolor-dark;
+	height: $scale4+rem;
+	width: 100%;
+
+	.progress {
+		@include gradient-lr($color-info, lighten($color-success, 10%));
+		height: $scale4+rem;
+
+		&.p25 {
+			width: 25%;
+		}
+
+		&.p50 {
+			width: 50%;
+		}
+
+		&.p75 {
+			width: 75%;
+		}
+
+		&.p100 {
+			width: 100%;
+		}
+	}
+}

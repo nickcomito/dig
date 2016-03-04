@@ -1,0 +1,187 @@
+
+
+// MOLECULES
+// Styles that combine atoms with atoms (i.e. label + input field)
+// Feel free to add project-specific styles here, classes and IDs are allowed
+
+
+
+
+// FORMS
+// -----
+
+.searchbox {
+	label {}
+	input {}
+
+	&.long {}
+}
+
+fieldset {
+	@extend %rounded-1;
+	border: 1px solid $color-light;
+	padding: $scale-b+rem;
+
+	legend {
+		color: $color-dark;
+	}
+}
+
+
+
+
+// ISLAND
+// ------
+
+.island {
+	box-sizing: border-box;
+
+	&.subtle {
+		@extend %bgcolor-light;
+		padding: $scale-2+rem;
+	}
+
+	&.subtle-alt {
+		@extend %bgcolor-light;
+		padding: $scale-2+rem;
+	}
+
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+
+
+
+// MESSAGES
+// --------
+
+.message {
+	@extend %bgcolor-subtle;
+	padding: $scale-2+rem;
+	color: #fff;
+
+	.icon {
+		position: relative;
+		top: 3px;
+	}
+
+	&.error {
+		@extend %bgcolor-error;
+		.icon {
+			fill: darken($fill-error, 25%);
+		}
+	}
+
+	&.info {
+		@extend %bgcolor-info;
+		.icon {
+			fill: darken($fill-info, 25%);
+		}
+	}
+
+	&.success {
+		@extend %bgcolor-success;
+		.icon {
+			fill: darken($fill-success, 25%);
+		}
+	}
+
+	&.warning {
+		@extend %bgcolor-warning;
+		.icon {
+			fill: darken($fill-warning, 25%);
+		}
+	}
+
+	&.special {
+		@extend %bgcolor-special;
+		.icon {
+			fill: darken($fill-special, 25%);
+		}
+	}
+
+	p {
+		margin-bottom: 0;
+	}
+}
+
+
+
+
+// NAVIGATION
+// ----------
+
+nav {
+	width: 100%;
+	@extend %padtop-1;
+	@extend %padbot-1;
+	@extend %margbot-2;
+
+	a {
+		@extend %left;
+		border-right: 1px solid $color-light;
+		padding-left: $scale-2+rem;
+		padding-right: $scale-2+rem;
+
+		&:first-child {
+			padding-left: 0;
+		}
+
+		&:last-child {
+			border-right: 0;
+			padding-right: 0;
+		}
+	}
+}
+
+
+
+
+
+// TABLES
+// ------
+
+table {
+	width: 100%;
+
+	@include break-range($media-md+px, 0px) {
+		&.responsive {
+	    @include responsive-table;
+	  }
+	}
+}
+
+thead {
+	@extend %uppercase;
+	@include break($media-md+px) {
+		border-bottom: 2px solid $color-light;
+	}
+	color: darken($color-light, 40%);
+	font-size: $scale-1+rem;
+}
+
+tfoot {
+	border-top: 2px solid $color-dark;
+	color: $color-dark;
+
+	td {
+		padding: $scale-b/2+rem;
+	}
+}
+
+tr {
+	border-bottom: 1px solid $color-light;
+}
+
+th, td {
+	padding: $scale-b/2+rem;
+
+	// No margin on paragraphs when they're inside a table cell
+	p {
+		margin: 0;
+	}
+}

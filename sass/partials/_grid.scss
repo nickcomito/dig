@@ -1,0 +1,435 @@
+
+
+// GRID
+// ----
+// Full width and contained grid styles
+// SM: 4 columns
+// MD: 8 columns
+// LG: 12 columns
+// XL: 16 columns
+
+
+
+// GRID SCAFFOLDING
+// ----------------
+
+// Contain the grid to a maximum width (set in _variables.scss)
+.contain {
+	@extend %clear;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: $max-width+px;
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+// Group a set of columns in a horizontal row
+.row {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+	&.padded {
+		padding-top: $gutter+px;
+		padding-bottom: $gutter+px;
+	}
+}
+
+// Set all the columns left and pad them
+.sm-1,.sm-2,.sm-3,.sm-4,
+.md-1,.md-2,.md-3,.md-4,.md-5,.md-6,.md-7,.md-8,
+.lg-1,.lg-2,.lg-3,.lg-4,.lg-5,.lg-6,.lg-7,.lg-8,.lg-9,.lg-10,.lg-11,.lg-12,
+.xl-1,.xl-2,.xl-3,.xl-4,.xl-5,.xl-6,.xl-7,.xl-8,.xl-9,.xl-10,.xl-11,.xl-12, .xl-13, .xl-14, .xl-15, .xl-16 {
+	box-sizing: border-box; // Calculate width to include padding
+	float: left;
+	padding-left: $gutter+px;
+	padding-right: $gutter+px;
+}
+
+form {
+	.sm-4, .md-4, .lg-6 {
+		padding-top: 1%;
+		padding-bottom: 1%;
+
+		@include break($media-md+px) {
+			padding-top: 1%;
+			padding-bottom: 1%;
+		}
+	}
+}
+
+
+// Small Columns
+
+.sm-1 {width: 25%;}
+.sm-2 {width: 50%}
+.sm-3 {width: 75%}
+.sm-4 {width: 100%;}
+
+.sm-pre-1 { padding-left: 25% }
+.sm-pre-2 { padding-left: 50% }
+.sm-pre-3 { padding-left: 75% }
+
+.sm-post-1 { padding-right: 25% }
+.sm-post-2 { padding-right: 50% }
+.sm-post-3 { padding-right: 75% }
+
+
+// Medium Columns
+
+@include break($media-md+px) {
+	.sm-1 {width: 25%}
+	.sm-2 {width: 50%}
+	.sm-3 {width: 75%}
+	.sm-4 {width: 100%}
+
+	.md-1 {width: 12.5%}
+	.md-2	{width: 25%;}
+	.md-3 {width: 37.5%}
+	.md-4 {width: 50%}
+	.md-5 {width: 62.5%}
+	.md-6 {width: 75%}
+	.md-7 {width: 87.5%}
+	.md-8 {width: 100%}
+
+	.sm-pre-1,.sm-pre-2,.sm-pre-3 {
+		padding-left: $gutter+px;
+	}
+
+	.sm-post-1,.sm-post-2,.sm-post-3 {
+		padding-right: $gutter+px;
+	}
+
+	.md-pre-1 { padding-left: 12.5% }
+	.md-pre-2 { padding-left: 25% }
+	.md-pre-3 { padding-left: 37.5% }
+	.md-pre-4 { padding-left: 50% }
+	.md-pre-5 { padding-left: 62.5% }
+	.md-pre-6 { padding-left: 75% }
+	.md-pre-7 { padding-left: 87.5% }
+
+	.md-post-1 { padding-right: 12.5% }
+	.md-post-2 { padding-right: 25% }
+	.md-post-3 { padding-right: 37.5% }
+	.md-post-4 { padding-right: 50% }
+	.md-post-5 { padding-right: 62.5% }
+	.md-post-6 { padding-right: 75% }
+	.md-post-7 { padding-right: 87.5% }	
+}
+
+
+// Large Columns
+
+@include break($media-lg+px) {
+	.sm-1 {width: 25%}
+	.sm-2	{width: 50%}
+	.sm-3 {width: 75%}
+	.sm-4 {width: 100%}
+
+	.md-1 {width: 12.5%}
+	.md-2	{width: 25%;}
+	.md-3 {width: 37.5%}
+	.md-4 {width: 50%}
+	.md-5 {width: 62.5%}
+	.md-6 {width: 75%}
+	.md-7 {width: 87.5%}
+	.md-8 {width: 100%}
+
+	.lg-1 {width: 8.33334%}
+	.lg-2	{width: 16.66667%}
+	.lg-3 {width: 25%}
+	.lg-4 {width: 33.33334%}
+	.lg-5 {width: 41.66667%}
+	.lg-6 {width: 50%}
+	.lg-7 {width: 58.33334%}
+	.lg-8 {width: 66.63334%}
+	.lg-9 {width: 74.9%}
+	.lg-10 {width: 83.2%}
+	.lg-11 {width: 91.6%}
+	.lg-12 {width: 100%}
+
+	.sm-pre-1,.sm-pre-2,.sm-pre-3 {
+		padding-left: $gutter+px;
+	}
+
+	.sm-post-1,.sm-post-2,.sm-post-3 {
+		padding-right: $gutter+px;
+	}
+
+	.md-pre-1,.md-pre-2,.md-pre-3,.md-pre-4,.md-pre-5,.md-pre-6,.md-pre-7,.md-pre-8 {
+		padding-left: $gutter+px;
+	}
+
+	.md-post-1,.md-post-2,.md-post-3,.md-post-4,.md-post-5,.md-post-6,.md-post-7,.md-post-8 {
+		padding-right: $gutter+px;
+	}
+
+	.lg-pre-1 { padding-left: 8.33334% }
+	.lg-pre-2 { padding-left: 16.66667% }
+	.lg-pre-3 { padding-left: 25% }
+	.lg-pre-4 { padding-left: 33.33334% }
+	.lg-pre-5 { padding-left: 41.66667% }
+	.lg-pre-6 { padding-left: 50% }
+	.lg-pre-7 { padding-left: 58.3334% }
+	.lg-pre-8 { padding-left: 66.63334% }
+	.lg-pre-9 { padding-left: 74.9% }
+	.lg-pre-10 { padding-left: 83.2% }
+	.lg-pre-11 { padding-left: 91.6% }
+
+	.lg-post-1 { padding-right: 8.33334% }
+	.lg-post-2 { padding-right: 16.66667% }
+	.lg-post-3 { padding-right: 25% }
+	.lg-post-4 { padding-right: 33.33334% }
+	.lg-post-5 { padding-right: 41.66667% }
+	.lg-post-6 { padding-right: 50% }
+	.lg-post-7 { padding-right: 58.3334% }
+	.lg-post-8 { padding-right: 66.63334% }
+	.lg-post-9 { padding-right: 74.9% }
+	.lg-post-10 { padding-right: 83.2% }
+	.lg-post-11 { padding-right: 91.6% }
+}
+
+
+// Extra Large Columns
+
+@include break($media-xl+px) {
+	.xl-1 {width: 6.25%}
+	.xl-2	{width: 12.5%}
+	.xl-3 {width: 18.75%}
+	.xl-4 {width: 25%}
+	.xl-5 {width: 31.25%}
+	.xl-6 {width: 37.5%}
+	.xl-7 {width: 43.75%}
+	.xl-8 {width: 50%}
+	.xl-9 {width: 56.25%}
+	.xl-10 {width: 62.5%}
+	.xl-11 {width: 68.75%}
+	.xl-12 {width: 75%}
+	.xl-13 {width: 81.25%}
+	.xl-14 {width: 87.5%}
+	.xl-15 {width: 93.75%}
+	.xl-16 {width: 100%}
+}
+
+
+
+
+// GRID UTILITIES
+// --------------
+
+
+// Gutter Management
+
+.trim {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.trim-l {
+	padding-left: 0;
+}
+
+.trim-r {
+	padding-right: 0;
+}
+
+.sm-trim {
+	@include break-range($media-md+px, 0px) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.sm-trim-l {
+	@include break-range($media-md+px, $media-sm+px) {
+		padding-left: 0;
+	}
+}
+
+.sm-trim-r {
+	@include break-range($media-md+px, $media-sm+px) {
+		padding-right: 0;
+	}
+}
+
+.md-trim {
+	@include break-range($media-lg+px, $media-md+px) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.md-trim-l {
+	@include break-range($media-lg+px, $media-md+px) {
+		padding-left: 0;
+	}
+}
+
+.md-trim-r {
+	@include break-range($media-lg+px, $media-md+px) {
+		padding-right: 0;
+	}
+}
+
+.lg-trim {
+	@include break($media-lg+px) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.lg-trim-l {
+	@include break($media-lg+px) {
+		padding-left: 0;
+	}
+}
+
+.lg-trim-r {
+	@include break($media-lg+px) {
+		padding-right: 0;
+	}
+}
+
+.sm-trim {
+	@include break-range(0, $media-md+px) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.md-trim {
+	@include break-range($media-md+px, $media-lg+px) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.lg-trim {
+	@include break-range($media-lg+px, $media-xl+px) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.xl-trim {
+	@include break($media-xl+px) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+
+.sm-trim-r {
+	@include break-range(0, $media-md+px) {
+		padding-right: 0;
+	}
+}
+
+.md-trim-r {
+	@include break-range($media-md+px, $media-lg+px) {
+		padding-right: 0;
+	}
+}
+
+.lg-trim-r {
+	@include break-range($media-lg+px, $media-xl+px) {
+		padding-right: 0;
+	}
+}
+
+.xl-trim-r {
+	@include break($media-xl+px) {
+		padding-right: 0;
+	}
+}
+
+.sm-trim-l {
+	@include break-range(0, $media-md+px) {
+		padding-left: 0;
+	}
+}
+
+.md-trim-l {
+	@include break-range($media-md+px, $media-lg+px) {
+		padding-left: 0;
+	}
+}
+
+.lg-trim-l {
+	@include break-range($media-lg+px, $media-xl+px) {
+		padding-left: 0;
+	}
+}
+
+.xl-trim-l {
+	@include break($media-xl+px) {
+		padding-left: 0;
+	}
+}
+
+
+// Column Centering
+// These only center a single column set (e.g. sm-2, md-4, lg-2)
+
+.centered {
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.sm-centered {
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+	@include break($media-md+px) {
+		float: left;
+	}
+}
+
+.md-centered {
+	@include break($media-md+px) {
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	@include break($media-lg+px) {
+		float: left;
+	}
+}
+
+.lg-centered {
+	@include break($media-lg+px) {
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	@include break($media-xl+px) {
+		float: left;
+	}
+}
+
+.xl-centered {
+	@include break($media-xl+px) {
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+
+// Set all the columns left and pad them
+
+.show-grid {
+.sm-1,.sm-2,.sm-3,.sm-4,
+.md-1,.md-2,.md-3,.md-4,.md-5,.md-6,.md-7,.md-8,
+.lg-1,.lg-2,.lg-3,.lg-4,.lg-5,.lg-6,.lg-7,.lg-8,.lg-9,.lg-10,.lg-11,.lg-12,
+.xl-1,.xl-2,.xl-3,.xl-4,.xl-5,.xl-6,.xl-7,.xl-8,.xl-9,.xl-10,.xl-11,.xl-12, .xl-13, .xl-14, .xl-15, .xl-16 {
+		border: 1px solid #00ccff;
+		box-sizing: border-box;
+	}
+}

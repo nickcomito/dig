@@ -1,0 +1,53 @@
+// List Group
+// ----------
+
+.list-group {
+	@extend %clear;
+
+	// clear the next sibling element
+	&:after {
+		@extend %clear;
+		content: "";
+		display: block;
+	}
+
+	ul {
+		box-sizing: border-box;
+		float: left;
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+
+	&.two {
+		ul { width: 50% }
+	}
+
+	&.three {
+		ul { width: 33.33334% }
+	}
+
+	&.four {
+		ul { width: 50% }
+		@include break($media-md+px) {
+			ul { width: 25% }	
+		}
+	}
+
+	&.five {
+		ul { width: 50% }
+		@include break($media-md+px) {
+			ul { width: 20% }	
+		}
+	}
+
+	&.six {
+		ul { width: 50% }
+		@include break($media-md+px) {
+			ul { width: 33.33334% }	
+		}
+		@include break($media-lg+px) {
+			ul { width: 16.66667% }	
+		}
+	}
+}

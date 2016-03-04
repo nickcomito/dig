@@ -1,0 +1,79 @@
+
+
+// COLOR
+// -----
+// The mixins below will generate classes for:
+// background colors, font colors, and SVG fills & strokes.
+// You can add and/or remove colors in the project colors map in _variables.scss
+
+
+
+
+
+// This mixin loops through the project-colors map (defined in _variables)
+// and generates classes for text colors, background colors, and color variations (light/dark/desaturation/saturation)
+@mixin color-generator($colors) {
+	@each $label, $value in $colors {
+
+		// Create background color classes
+		%bgcolor-#{$label} { background-color: $value; }
+		.bgcolor-#{$label} { background-color: $value; }
+
+		// Create text color classes
+		%color-#{$label} { color: $value; }
+		.color-#{$label} { color: $value; }
+
+		$i: 1;
+		@while $i < 4 {
+			$percentage: $i * 5;
+
+			// Create lighten and darken classes
+			%ltcolor-#{$label}-#{$percentage} { color: lighten($value, $percentage); }
+			.ltcolor-#{$label}-#{$percentage} { color: lighten($value, $percentage); }
+			%dkcolor-#{$label}-#{$percentage} { color: darken($value, $percentage); }
+			.dkcolor-#{$label}-#{$percentage} { color: darken($value, $percentage); }
+			%scolor-#{$label}-#{$percentage} { color: saturate($value, $percentage); }
+			.scolor-#{$label}-#{$percentage} { color: saturate($value, $percentage); }
+			%dscolor-#{$label}-#{$percentage} { color: desaturate($value, $percentage); }
+			.dscolor-#{$label}-#{$percentage} { color: desaturate($value, $percentage); }
+
+			// Create saturate and desaturate classes
+			%ltbgcolor-#{$label}-#{$percentage} { background-color: lighten($value, $percentage); }
+			.ltbgcolor-#{$label}-#{$percentage} { background-color: lighten($value, $percentage); }
+			%dkbgcolor-#{$label}-#{$percentage} { background-color: darken($value, $percentage); }
+			.dkbgcolor-#{$label}-#{$percentage} { background-color: darken($value, $percentage); }
+			%sbgcolor-#{$label}-#{$percentage} { background-color: saturate($value, $percentage); }
+			.sbgcolor-#{$label}-#{$percentage} { background-color: saturate($value, $percentage); }
+			%dsbgcolor-#{$label}-#{$percentage} { background-color: desaturate($value, $percentage); }
+			.dsbgcolor-#{$label}-#{$percentage} { background-color: desaturate($value, $percentage); }
+
+			$i: $i + 1;
+		}
+	}
+}
+
+
+// This mixin loops through the project-colors map (defined in _variables)
+// and generates classes for fill and strokes which gives us styling options for SVG
+@mixin icon-colors($colors) {
+	@each $label, $value in $colors {
+		%fill-#{$label} { fill: $value }
+		.fill-#{$label} { fill: $value }
+
+		%stroke-#{$label} { stroke: $value }
+		.stroke-#{$label} { stroke: $value }
+
+		.svg.icon.fill-inner-#{$label} .inner { fill: $value; }
+		.svg.icon.fill-outer-#{$label} .outer { fill: $value; }
+	}
+}
+
+// Gradient from top (default white) to bottom (default black)
+@mixin gradient-tb($top: #fff, $bottom: #000) {
+  @include background(linear-gradient(top, $top, $bottom));
+}
+
+// Gradient from left (default white) to right (default black)
+@mixin gradient-lr($left: #fff, $right: #000) {
+  @include background(linear-gradient(left, $left, $right));
+}

@@ -1,0 +1,65 @@
+
+// ICONS
+// -----
+
+// Run the icon color generator in _colors.scss
+@include icon-colors($project-colors);
+
+.icon {
+	//default size
+	display: inline-block;
+	height: $scale-b+rem;
+	width: $scale-b+rem;
+
+	&.sm {
+		height: $scale-1+rem;
+		width: $scale-1+rem;
+	}
+
+	&.md {
+		height: $scale2+rem;
+		width: $scale2+rem;
+	}
+
+	&.lg {
+		height: $scale4+rem;
+		width: $scale4+rem;
+	}
+
+	&.xl {
+		height: $scale6+rem;
+		width: $scale6+rem;
+	}
+
+	&.xxl {
+		height: $scale9+rem;
+		width: $scale9+rem;
+	}
+}
+
+.svg.icon {
+	stroke-width: $icon-stroke-width;
+
+	&.outline,
+	&.fill-none {
+		fill: transparent;		
+	}
+
+	&.fill-inner-none {
+		.inner {
+			fill: transparent;
+		}
+	}
+
+	&.fill-outer-none {
+		.outer {
+			fill: transparent;
+		}
+	}
+}
+
+
+.icon-arrow-up:not(.svg) {
+	background: url('../images/icon-arrow-up.svg');
+	border: 1px solid blue;
+}

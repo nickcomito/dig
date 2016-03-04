@@ -1,0 +1,428 @@
+
+// UTILITIES
+// General, reusable classes that you can use from project to project
+
+@mixin break($width) {
+	@media only screen and (min-width:$width){
+		@content;
+	}
+}
+
+@mixin break-range($max, $min) {
+	@media only screen and (max-width:$max) and (min-width:$min) {
+		@content;
+	}
+}
+
+
+// Type
+// ----
+
+
+// Fonts
+
+%font-primary,.font-primary {
+	font-family: $font-primary;
+}
+
+%font-secondary,.font-secondary {
+	font-family: $font-secondary;
+}
+
+
+// Alignment
+
+%text-left, .text-left { text-align: left; }
+%text-right, .text-right { text-align: right; }
+%text-center, .text-center { text-align: center; }
+
+%sm-text-center, .sm-text-center {
+	@include break-range($media-sm+px, $media-md+px) {
+		text-align: center;
+	}
+}
+%md-text-center, .md-text-center {
+	@include break-range($media-sm+px, $media-md+px) {
+		text-align: center;
+	}
+}
+%lg-text-center, .lg-text-center {
+	@include break($media-lg+px) {
+		text-align: center;
+	}
+}
+
+%sm-text-left, .sm-text-left {
+	@include break-range($media-sm+px, $media-md+px) {
+		text-align: left;
+	}
+}
+%md-text-left, .md-text-left {
+	@include break-range($media-sm+px, $media-md+px) {
+		text-align: left;
+	}
+}
+%lg-text-left, .lg-text-left {
+	@include break($media-lg+px) {
+		text-align: left;
+	}
+}
+
+%sm-text-right, .sm-text-right {
+	@include break-range($media-sm+px, $media-md+px) {
+		text-align: right;
+	}
+}
+%md-text-right, .md-text-right {
+	@include break-range($media-md+px, $media-lg+px) {
+		text-align: right;
+	}
+}
+%lg-text-right, .lg-text-right {
+	@include break($media-lg+px) {
+		text-align: right;
+	}
+}
+
+
+// Size (with px fallback)
+
+%alpha, .alpha {
+	font-size: $scale5*$base+px;
+	font-size: $scale5+rem;
+	@include break($media-md+px) {
+		font-size: $scale8*$base+px;
+		font-size: $scale8+rem;	
+	}
+	@include break($media-lg+px) {
+		font-size: $scale7*$base+px;
+		font-size: $scale7+rem;	
+	}
+}
+
+%beta, .beta {
+	font-size: $scale3*$base+px;
+	font-size: $scale3+rem;
+	@include break($media-md+px) {
+		font-size: $scale5*$base+px;
+		font-size: $scale5+rem;	
+	}
+	@include break($media-lg+px) {
+		font-size: $scale4*$base+px;
+		font-size: $scale4+rem;	
+	}
+}
+
+%gamma, .gamma {
+	font-size: $scale2*$base+px;
+	font-size: $scale2+rem;
+	@include break($media-md+px) {
+		font-size: $scale4*$base+px;
+		font-size: $scale4+rem;	
+	}
+	@include break($media-lg+px) {
+		font-size: $scale3*$base+px;
+		font-size: $scale3+rem;	
+	}
+}
+
+%delta, .delta { 
+	font-size: $scale1*$base+px;
+	font-size: $scale1+rem;
+	@include break($media-md+px) {
+		font-size: $scale3*$base+px;
+		font-size: $scale3+rem;	
+	}
+	@include break($media-lg+px) {
+		font-size: $scale2*$base+px;
+		font-size: $scale2+rem;	
+	}
+}
+
+%epsilon, .epsilon { 
+	font-size: $scale-b*$base+px;
+	font-size: $scale-b+rem;
+	@include break($media-md+px) {
+		font-size: $scale2*$base+px;
+		font-size: $scale2+rem;	
+	}
+	@include break($media-lg+px) {
+		font-size: $scale1*$base+px;
+		font-size: $scale1+rem;	
+	}
+}
+
+%zeta, .zeta { 
+	font-size: $scale-1*$base+px;
+	font-size: $scale-1+rem;
+	@include break($media-md+px) {
+		font-size: $scale1*$base+px;
+		font-size: $scale1+rem;	
+	}
+	@include break($media-lg+px) {
+		font-size: $scale-b*$base+px;
+		font-size: $scale-b+rem;
+	}
+}
+
+
+// Scale classes (with px fallback)
+
+%scale-6,.scale-6 {font-size: $scale-6*$base+px; font-size: $scale-6+rem;}
+%scale-5,.scale-5 {font-size: $scale-5*$base+px; font-size: $scale-5+rem;}
+%scale-4,.scale-4 {font-size: $scale-4*$base+px; font-size: $scale-4+rem;}
+%scale-3,.scale-3 {font-size: $scale-3*$base+px; font-size: $scale-3+rem;}
+%scale-2,.scale-2 {font-size: $scale-2*$base+px; font-size: $scale-2+rem;}
+%scale-1,.scale-1 {font-size: $scale-1*$base+px; font-size: $scale-1+rem;}
+%scale-b,.scale-b {font-size: $scale-b*$base+px; font-size: $scale-b+rem;}
+%scale1,.scale1 {font-size: $scale1*$base+px; font-size: $scale1+rem;}
+%scale2,.scale2 {font-size: $scale2*$base+px; font-size: $scale2+rem;}
+%scale3,.scale3 {font-size: $scale3*$base+px; font-size: $scale3+rem;}
+%scale4,.scale4 {font-size: $scale4*$base+px; font-size: $scale4+rem;}
+%scale5,.scale5 {font-size: $scale5*$base+px; font-size: $scale5+rem;}
+%scale6,.scale6 {font-size: $scale6*$base+px; font-size: $scale6+rem;}
+%scale7,.scale7 {font-size: $scale7*$base+px; font-size: $scale7+rem;}
+%scale8,.scale8 {font-size: $scale8*$base+px; font-size: $scale8+rem;}
+%scale9,.scale9 {font-size: $scale9*$base+px; font-size: $scale9+rem;}
+
+
+// Style
+
+%uppercase, .uppercase { text-transform: uppercase }
+
+
+// Lists
+
+.no-bullets {	list-style: none }
+
+
+
+
+// Spacing
+// -------
+
+
+// Margins
+
+%margall-0, .margall-0 { margin: 0; }
+%margall-1, .margall-1 { margin: $scale1+rem; }
+%margall-2, .margall-2 { margin: $scale2+rem; }
+%margall-3, .margall-3 { margin: $scale3+rem; }
+%margall-4, .margall-4 { margin: $scale4+rem; }
+%margall-5, .margall-5 { margin: $scale5+rem; }
+
+%margtop-0, .margtop-0 { margin-top: 0; }
+%margtop-1, .margtop-1 { margin-top: $scale1+rem; }
+%margtop-2, .margtop-2 { margin-top: $scale2+rem; }
+%margtop-3, .margtop-3 { margin-top: $scale3+rem; }
+%margtop-4, .margtop-4 { margin-top: $scale4+rem; }
+%margtop-5, .margtop-5 { margin-top: $scale5+rem; }
+
+%margright-0, .margright-0 { margin-right: 0; }
+%margright-1, .margright-1 { margin-right: $scale1+rem; }
+%margright-2, .margright-2 { margin-right: $scale2+rem; }
+%margright-3, .margright-3 { margin-right: $scale3+rem; }
+%margright-4, .margright-4 { margin-right: $scale4+rem; }
+%margright-5, .margright-5 { margin-right: $scale5+rem; }
+
+%margbot-0, .margbot-0 { margin-bottom: 0; }
+%margbot-1, .margbot-1 { margin-bottom: $scale1+rem; }
+%margbot-2, .margbot-2 { margin-bottom: $scale2+rem; }
+%margbot-3, .margbot-3 { margin-bottom: $scale3+rem; }
+%margbot-4, .margbot-4 { margin-bottom: $scale4+rem; }
+%margbot-5, .margbot-5 { margin-bottom: $scale5+rem; }
+
+%margleft-0, .margleft-0 { margin-left: 0; }
+%margleft-1, .margleft-1 { margin-left: $scale1+rem; }
+%margleft-2, .margleft-2 { margin-left: $scale2+rem; }
+%margleft-3, .margleft-3 { margin-left: $scale3+rem; }
+%margleft-4, .margleft-4 { margin-left: $scale4+rem; }
+%margleft-5, .margleft-5 { margin-left: $scale5+rem; }
+
+
+// Padding
+
+%padall-0, .padall-0 { padding: 0; }
+%padall-1, .padall-1 { padding: $scale1+rem; }
+%padall-2, .padall-2 { padding: $scale2+rem; }
+%padall-3, .padall-3 { padding: $scale3+rem; }
+%padall-4, .padall-4 { padding: $scale4+rem; }
+%padall-5, .padall-5 { padding: $scale5+rem; }
+
+%padtop-0, .padtop-0 { padding-top: 0; }
+%padtop-1, .padtop-1 { padding-top: $scale1+rem; }
+%padtop-2, .padtop-2 { padding-top: $scale2+rem; }
+%padtop-3, .padtop-3 { padding-top: $scale3+rem; }
+%padtop-4, .padtop-4 { padding-top: $scale4+rem; }
+%padtop-5, .padtop-5 { padding-top: $scale5+rem; }
+
+%padright-0, .padght-0 { padding-right: 0; }
+%padright-1, .padght-1 { padding-right: $scale1+rem; }
+%padright-2, .padght-2 { padding-right: $scale2+rem; }
+%padright-3, .padght-3 { padding-right: $scale3+rem; }
+%padright-4, .padght-4 { padding-right: $scale4+rem; }
+%padright-5, .padght-5 { padding-right: $scale5+rem; }
+
+%padbot-0, .padbot-0 { padding-bottom: 0; }
+%padbot-1, .padbot-1 { padding-bottom: $scale1+rem; }
+%padbot-2, .padbot-2 { padding-bottom: $scale2+rem; }
+%padbot-3, .padbot-3 { padding-bottom: $scale3+rem; }
+%padbot-4, .padbot-4 { padding-bottom: $scale4+rem; }
+%padbot-5, .padbot-5 { padding-bottom: $scale5+rem; }
+
+%padleft-0, .padeft-0 { padding-left: 0; }
+%padleft-1, .padeft-1 { padding-left: $scale1+rem; }
+%padleft-2, .padeft-2 { padding-left: $scale2+rem; }
+%padleft-3, .padeft-3 { padding-left: $scale3+rem; }
+%padleft-4, .padeft-4 { padding-left: $scale4+rem; }
+%padleft-5, .padeft-5 { padding-left: $scale5+rem; }
+
+
+
+
+// Positioning
+// -----------
+
+%left, .left {	float: left }
+%right, .right { float: right }
+%clear, .clear { clear: both }
+%clear-r, .clear-r { clear: right }
+%clear-l, .clear-l { clear: left }
+
+
+// Float on small
+.sm-left {
+	float: left;
+	@include break($media-sm+px) {
+		float: none;
+	}
+}
+.sm-right {
+	float: right;
+	@include break($media-sm+px) {
+		float: none;
+	}
+}
+
+// Float on medium
+.md-left {
+	@include break($media-md+px) {
+		float: left;
+	}
+	@include break($media-lg+px) {
+		float: none;
+	}
+}
+.md-right {
+	@include break($media-md+px) {
+		float: right;
+	}
+	@include break($media-lg+px) {
+		float: none;
+	}
+}
+
+// Float on large
+.lg-left {
+	@include break($media-lg+px) {
+		float: left;
+	}
+}
+.lg-right {
+	@include break($media-lg+px) {
+		float: right;
+	}
+}
+
+// Center some boxes
+.centered {
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+	width: 75%;
+
+	&.narrow {
+		width: 45%;
+	}
+
+	&.normal {
+		width: 60%;
+	}
+
+	&.wide {
+		width: 90%;
+	}
+}
+
+
+
+
+// Style Adjustments
+// -----------------
+
+// Rounded Corners
+%rounded-1, .rounded-1 { border-radius: $rounded-1+px; }
+%rounded-2, .rounded-2 { border-radius: $rounded-2+px; }
+
+// Shadows
+%shadow-1, .shadow-1 { box-shadow: 0 1px 1px rgba(0,0,0,.25) }
+%shadow-2, .shadow-2 { box-shadow: 0 $base/4+px $base/4+px rgba(0,0,0,.25) }
+%shadow-3, .shadow-3 { box-shadow: 0 $base+px $base+px rgba(0,0,0,.25) }
+
+
+
+
+// COLOR
+// -----
+
+@include color-generator($project-colors);
+
+
+
+
+// RESPONSIVE DATA TABLES
+// ----------------------
+
+table.responsive td span.inline-header {
+  display: none;
+}
+
+@mixin responsive-table {
+  width: 100%;
+  thead,
+  tbody,
+  th,
+  td,
+  tr { display: block }
+  thead tr {
+    left: -9999px;
+    position: absolute;
+    top: -9999px;
+  }
+  tbody {
+  	tr { padding: $scale-b+rem 0; border-bottom: 1px solid $color-light }
+	  td {
+	    // Behave  like a "row" //
+	    border: 0;
+	    padding: $scale-b/3+rem 0;
+	    position: relative;
+	    clear: both;
+	  }	
+  }
+
+  tfoot {
+  	td {
+  		padding: $scale-b/3+rem 0;
+
+  		&:last-child {
+  			padding-bottom: 0;
+  		}
+  	}
+  }
+  
+  td span.inline-header {
+  	color: $color-medium;
+    display: block;
+    word-wrap: break-word;
+  }
+}

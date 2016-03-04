@@ -1,0 +1,27 @@
+// Login Form
+// ----------
+
+.login-form {
+	form {
+		@extend %bgcolor-subtle;
+		@extend %padall-2;
+	}
+
+	.form-support {
+		@extend %dkbgcolor-subtle-10;
+		@extend %padleft-2;
+		@extend %padright-2;
+		padding-top: $scale-1+rem;
+		padding-bottom: $scale-1+rem;
+
+		&:after {
+			content: "";
+			clear: both;
+			display: block;
+		}
+
+		p {
+			margin-bottom: 0;
+		}
+	}
+}

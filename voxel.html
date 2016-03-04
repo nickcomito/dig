@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Component Design</title>	
+	<link rel="stylesheet" href="stylesheets/voxel.css">
+  <link rel="stylesheet" href="stylesheets/screen.css">
+    <script data-main="js/ui.js" src="js/require.js"></script>
+</head>
+
+<body>
+	<script src="js/voxel.js"></script>
+  <h2 class="fadein">Designing by component</h2>
+  <div class="demo">
+  </div>
+
+	<script>
+  (function(){
+    var BLOCKDIM = 80; // Block size
+    var scene;
+    var lightSource;
+
+    var magenta = "DE00DE";
+    var yellow = "FCFC00";
+    var blue = "01FFFF";
+    var green = "00E601";
+    var orange = "FF7D01";
+    
+    window.addEventListener('load', Init);
+    function Init(){
+      CreateWorld();
+    }
+    
+    function CreateWorld(){
+      if(window.innerWidth <= 600)
+        BLOCKDIM = 30; // Resize blocks for smaller screens
+      
+      scene = new voxelcss.Scene();
+      scene.rotate(-Math.PI/6, Math.PI/4, 0);
+      
+      lightSource = new voxelcss.LightSource(-500, -500, 900, 5250, 0.7, 0.9);
+      scene.addLightSource(lightSource);
+      
+      scene.attach(document.querySelector('.demo'));
+      scene.disableZoom();
+      // scene.disableOrbit();
+      
+      tetrisTriangle();
+      setTimeout(HideWorld, 3500);
+
+
+    }
+
+    function setColor(hexValue) {
+      return new voxelcss.Mesh(new voxelcss.ColorFace(hexValue));
+    }
+
+    function tetrisTriangle() {
+      var blocks = [
+        {x:0, y:1, z:1},
+        {x:0, y:1, z:2},
+        {x:0, y:1, z:0},
+        {x:0, y:2, z:1},
+      ];
+      AnimateRotation(0, 50, 0, 250000);
+      AnimateBlocks(blocks, new voxelcss.Mesh(new voxelcss.ColorFace(magenta)));
+    }
+
+    // function tetrisZ() {
+
+    // }
+    
+    function HideWorld(){
+      var voxels = scene.getVoxels();
+      function RemoveWhile(){
+        scene.remove(voxels[voxels.length - 1]);
+        voxels = scene.getVoxels();
+        if(voxels.length > 0)
+          setTimeout(RemoveWhile, 50);
+      }
+      RemoveWhile();
+    }
+    
+    function FixSceneZoom(){
+      scene.setZoom(window.innerWidth / 1435);
+    }
+
+    function AnimateBlocks(map, mesh){
+      var time=0;
+      for(var i=0; i<map.length; i++){
+        var pos = map[i];
+        (function(pos){
+          setTimeout(function(){
+            new voxelcss.Voxel(BLOCKDIM*pos.x, BLOCKDIM*pos.y, BLOCKDIM*pos.z, BLOCKDIM, {
+              mesh: mesh
+            }).animUp(scene);
+          }, (time++) * 700);
+        })(pos);
+      }
+    }
+    function AnimatePan(x, y, z, duration){
+      var stepduration = 20;
+      var time = 0;
+      var steps = Math.floor(duration / stepduration);
+      var dx = x / steps;
+      var dy = y / steps;
+      var dz = z / steps;
+      for(var i=0; i<steps; i++)
+        setTimeout(function(){
+          scene.pan(dx, dy, dz);
+        }, (time++) * stepduration);
+    }
+
+    function AnimateRotation(x, y, z, duration) {
+      var stepduration = 20;
+      var time = 0;
+      var steps = Math.floor(duration / stepduration);
+      var dx = x / steps;
+      var dy = y / steps;
+      var dz = z / steps;
+
+      for(var i=0; i<steps; i++)
+        setTimeout(function(){
+          scene.rotate(dx, dy, dz);
+        }, (time++) * stepduration);
+    }
+
+    function AnimateZoom(zoom, duration){
+      var stepduration = 20;
+      var time = 0;
+      var steps = Math.floor(duration / stepduration);
+      var dz = zoom / steps;
+      for(var i=0; i<steps; i++)
+        setTimeout(function(){
+          scene.zoom(dz);
+        }, (time++) * stepduration);
+    }
+  })();
+</script>
+</body>
+
+</html>

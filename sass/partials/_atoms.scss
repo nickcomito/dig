@@ -1,0 +1,376 @@
+
+
+// ATOMS
+// Styles for base HTML elements
+
+
+
+
+// Base
+// ----
+
+html {}
+body { font-family: $font-secondary; font-weight: 300; }
+
+
+
+
+// Type
+// ----
+
+// Much of the type is already set with _variables.scss and _type.scss
+// but you can override here
+
+a,
+a:active,
+a:visited {
+  @extend %color-primary;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+abbr {
+  border-bottom: 1px dotted #999;
+  cursor: help;
+}
+
+blockquote { 
+  font-size: $scale1+rem;
+  font-style: italic;
+}
+
+caption {}
+
+cite { font-style: italic; }
+
+code { font-family: monospace; }
+
+em { font-style: italic; }
+
+dd { margin-bottom: $scale-b/2+rem;}
+
+// Use for definitions
+dfn { font-style: italic; }
+
+dl {}
+
+dt { font-weight: bold; }
+
+figcaption { font-size: $scale-2+rem; }
+
+h1,h2,h3,h4,h5,h6 {
+  @extend %color-dark;
+	font-family: $font-primary;
+  line-height: 1.2;
+	margin-bottom: $scale-b/4+rem;
+}
+
+h1 { @extend %alpha; }
+h2 { @extend %beta; }
+h3 { @extend %gamma; }
+h4 { @extend %delta; }
+h5 { @extend %epsilon; }
+h6 { @extend %zeta; }
+
+// A group of headings
+hgroup {}
+
+// Display inline keyboard commands
+// (i.e. Enter the URL: <kbd>http://praxent.com</kbd> to visit our site)
+kbd { @extend %color-info; font-family: monospace; }
+
+label {
+  @extend %color-dark;
+}
+
+// Highlight some text just like in school
+mark { @extend %bgcolor-highlight; }
+
+ol {
+  list-style: decimal;
+  padding-left: $scale-b+rem;
+
+  ol {
+    list-style: lower-alpha;
+
+    ol {
+      list-style: lower-roman;
+    }
+  }
+}
+
+p {
+  margin-bottom: $scale-b+rem;
+}
+
+pre {
+  display: block;
+  font-family: monospace;
+  white-space: pre;
+}
+
+// Display inline quotes
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+
+  &:before {
+    content: open-quote;
+  }
+
+  &:after {
+    content: close-quote;
+  }
+}
+
+// A sample of text or code
+samp { font-family: monospace; }
+
+small {
+  font-size: $scale-1+rem;
+  line-height: $scale-b+rem;
+}
+
+span { display: inline; }
+
+s,
+strike { text-decoration: line-through; }
+
+strong {
+  font-weight: bold;
+  line-height: inherit;
+}
+
+sub { vertical-align: sub; }
+
+sup { 
+  font-size: $scale1+rem;
+  vertical-align: super;
+}
+
+u { text-decoration: underline; }
+
+ul {
+  list-style: disc;
+  padding-left: $scale-b+rem;
+  margin-bottom: $scale-b+rem;
+
+  ul {
+    list-style: square;
+
+    ul {
+      list-style: circle;
+    }
+  }
+}
+
+li {
+  &.no-bullet {
+    list-style: none;
+  }
+}
+
+var { font-style: italic; }
+
+
+
+
+// Form & Input
+// ------------
+
+input,
+select,
+textarea {
+  @extend %rounded-1;
+  border: 1px solid $color-medium;
+  box-sizing: border-box;
+  color: $color-dark;
+  font-family: $font-secondary;
+  font-size: $scale-b+rem; 
+  font-weight: bold;
+  margin-bottom: $scale-1+rem;
+  padding: $scale-3+rem;
+  width: 100%;
+}
+
+.input-row { 
+  box-sizing: border-box;
+  color: $color-dark;
+  font-family: $font-secondary;
+  font-size: $scale-b+rem;
+  margin-bottom: $scale-1+rem;
+  width: 100%;
+
+  &:after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+}
+
+select { 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150.4 193.2" xml:space="preserve"><polygon fill="#444444" points="0,75.1 75.1,0 150.4,75.3 "/><polygon fill="#444444" points="150.4,118.1 75.3,193.2 0,117.9 "/></svg>');
+  background-repeat: no-repeat;
+  background-position: 98% 50%;
+  background-size: $scale-2+rem;
+}
+
+textarea {
+  
+}
+
+input[type="checkbox"] {
+  float: left;
+  line-height: 24px;
+  margin: $scale-6+rem $scale-2+rem 0 0;
+  padding: 0;
+  width: auto;
+}
+
+
+// Buttons
+// -------
+
+button,
+.button {
+  background-color: $color-primary;
+  border: 0;
+  border-radius: 2px;
+  color: lighten($color-primary, 50%);
+  cursor: pointer;
+  font-family: $font-secondary;
+  font-size: $scale-b+rem;
+  padding: $scale-1+rem $scale3+rem;
+
+  &:hover {
+    background-color: lighten($color-primary, 2%);
+    color: lighten($color-primary, 60%);
+  }
+
+  &.secondary {
+    background-color: $color-secondary;
+    color: lighten($color-secondary, 50%);
+    &:hover {
+      background-color: lighten($color-secondary, 4%);
+      color: lighten($color-secondary, 60%);
+    }
+  }
+
+  &.tertiary {
+    background-color: $color-accent;
+    color: lighten($color-accent, 50%);
+    &:hover {
+      background-color: lighten($color-accent, 4%);
+      color: lighten($color-accent, 60%);
+    }
+  }
+
+  &.expand {
+    display: block;
+    width: 100%;
+  }
+
+  &.sm-expand {
+    display: block;
+    width: 100%;
+    @include break($media-md+px) {
+      width: auto;
+    }
+  }
+
+  &.small {
+    font-size: $scale-2+rem;
+    padding: $scale-5+rem $scale-b+rem;
+  }
+
+  &.subtle {
+    background-color: $color-subtle;
+    color: darken($color-subtle, 35%);
+    &:hover {
+      background-color: lighten($color-subtle, 2%);
+      color: darken($color-subtle, 25%);
+    }
+  }
+
+  &.rounded {
+    border-radius: $scale5+rem;
+  }
+
+  &.outline {
+    background: transparent;
+    border: $scale5+px solid $color-primary;
+    color: $color-primary;
+    &:hover {
+      border-color: lighten($color-primary, 2%);
+    }
+  }
+
+  &.cancel {
+
+  }
+
+  &.error {
+    background-color: $color-error;
+    color: lighten($color-error, 50%);
+    &:hover {
+      background-color: lighten($color-error, 2%);
+      color: lighten($color-error, 60%);
+    }
+  }
+
+  &:disabled {
+    background-color: $color-light;
+    color: darken($color-light, 20%);
+    cursor: not-allowed;
+  }
+
+  &.shadowed {
+    @extend %shadow-1;
+  }
+
+  .svg.icon {
+    fill: $color-light;
+    height: $scale1+rem;
+    float: left;
+    margin-left: -$scale-2+rem;
+    margin-right: $scale-6+rem;
+    position: relative;
+    width: $scale1+rem;
+  }
+}
+
+
+
+
+// Table
+// -----
+
+// See molecules
+
+
+
+
+// MISCELLANEOUS
+// -------------
+
+hr {
+  background-color: $color-light;
+  border: 0;
+  height: 1px;
+}
+
+br {}
+
+
+
+
+// IMAGES
+// ------
+
+figure {}
+
+img { max-width: 100%; }

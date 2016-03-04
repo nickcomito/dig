@@ -1,0 +1,26 @@
+
+// Context Steps
+// --------------
+
+
+.context-steps {
+	.step {
+		@extend %left;
+		@extend %bgcolor-light;
+		border-top: 2px solid darken($color-light, 10%);
+		border-bottom: 2px solid darken($color-light, 10%);
+		padding: $scale1+rem $scale6+rem;
+
+		&.current {
+			background-color: lighten($color-light, 5%);
+			border-top: 2px solid $color-success;
+			border-bottom: 2px solid $color-success;
+		}
+	}
+
+	&:after {
+		clear: both;
+		content: "";
+		display: block;
+	}
+}
