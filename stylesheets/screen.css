@@ -4152,8 +4152,12 @@ form .sm-4, form .md-4, form .lg-6 {
 .svg.icon.fill-outer-none .outer {
   fill: transparent;
 }
+/* line 61, ../sass/partials/_icons.scss */
+.svg.icon.fill-inner-white .inner {
+  fill: #fff;
+}
 
-/* line 62, ../sass/partials/_icons.scss */
+/* line 66, ../sass/partials/_icons.scss */
 .icon-arrow-up:not(.svg) {
   background: url("../images/icon-arrow-up.svg");
   border: 1px solid blue;

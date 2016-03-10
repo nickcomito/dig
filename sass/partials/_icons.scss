@@ -56,6 +56,10 @@
 			fill: transparent;
 		}
 	}
+
+	&.fill-inner-white {
+		.inner { fill: #fff }
+	}
 }
 
 
