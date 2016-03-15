@@ -37,12 +37,12 @@
 %text-center, .text-center { text-align: center; }
 
 %sm-text-center, .sm-text-center {
-	@include break-range($media-sm+px, $media-md+px) {
+	@include break-range($media-md+px, 0) {
 		text-align: center;
 	}
 }
 %md-text-center, .md-text-center {
-	@include break-range($media-sm+px, $media-md+px) {
+	@include break-range($media-lg+px, $media-md+px) {
 		text-align: center;
 	}
 }
@@ -53,12 +53,12 @@
 }
 
 %sm-text-left, .sm-text-left {
-	@include break-range($media-sm+px, $media-md+px) {
+	@include break-range($media-md+px, 0) {
 		text-align: left;
 	}
 }
 %md-text-left, .md-text-left {
-	@include break-range($media-sm+px, $media-md+px) {
+	@include break-range($media-lg+px, $media-md+px) {
 		text-align: left;
 	}
 }
@@ -69,12 +69,12 @@
 }
 
 %sm-text-right, .sm-text-right {
-	@include break-range($media-sm+px, $media-md+px) {
+	@include break-range($media-md+px, 0) {
 		text-align: right;
 	}
 }
 %md-text-right, .md-text-right {
-	@include break-range($media-md+px, $media-lg+px) {
+	@include break-range($media-lg+px, $media-md+px) {
 		text-align: right;
 	}
 }
