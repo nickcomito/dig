@@ -79,6 +79,16 @@ function   ($, velocity) {
   svg_replace();
 
 
+  // Tabs
+  $('ul.tab-titles li').click(function(){
+    var tab_id = $(this).attr('data-tab');
+    $('ul.tab-titles li').removeClass('active');
+    $('.tab-content').removeClass('active');
+    $(this).addClass('active');
+    $("#"+tab_id).addClass('active');
+  });
+
+
   /* Overlays & Trigger */
   $("#tutorial-trigger").click(function() {
     $("#tutorial-overlay").addClass("visible");
