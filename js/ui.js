@@ -1,5 +1,3 @@
-
-
 /* Reponsive tables
  * This function parses table header cells and "moves" them into spans to be displayed inline
  */
@@ -21,6 +19,7 @@ responsiveTables = function(element) {
 responsiveTables();
 
 requirejs.config({
+    urlArgs: "bust=v2",
     //By default load any module IDs from js/
     baseUrl: 'js',
     //except, if the module ID starts with "app",
@@ -45,7 +44,7 @@ requirejs.config({
 
 // Start the main app logic.
 requirejs(['jquery', 'velocity'],
-function   ($,        velocity) {
+function   ($, velocity) {
 
   svg_replace = function(element) {
     $('img.svg').each(function(){
@@ -114,21 +113,25 @@ function   ($,        velocity) {
     });
   }
 
-  function popup () {
-    $(".popup").velocity({
-      opacity: 1,
-      width: "60%",
-      height: "60%",
-    },
-    {
-      duration: 200,
-    });
+  function open(e) {
+    if ($(e).hasClass("opened")) {
+      $(e).velocity("reverse", {duration: 500});
+    }
+    else {
+      $(e).velocity({
+        scaleX: 20,
+        scaleY: 20,
+        translateX: 20,
+        translateY: 5,
+      }, {duration: 500});
+    }
   }
 
-  $("#popup-trigger").click(function() {
-    $(".popup").addClass("active");
-    popup();
-  })
+  $("#open-trigger").click(function() {
+    open($(".open"));
+    $(".open").toggleClass("opened");
+  });
+
 
   $("#slide-l-trigger").click(function() {
     slide_l();
@@ -141,4 +144,3 @@ function   ($,        velocity) {
   });
 
 });
-

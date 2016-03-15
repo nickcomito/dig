@@ -380,6 +380,79 @@
 
 
 
+// VISIBILITY
+// ----------
+
+
+// Show Range
+
+.show-sm {
+	display: block;
+}
+
+.show-md {
+	@include break-range($media-lg+px, $media-md+px) {
+		display: block;
+	}
+}
+
+.show-lg {
+	@include break($media-lg+px) {
+		display: block;
+	}
+}
+
+
+// Hide Range
+
+.hide-sm {
+	display: none;
+}
+
+.hide-md {
+	@include break-range($media-lg+px, $media-md+px) {
+		display: none;
+	}
+}
+
+.hide-lg {
+	@include break($media-lg+px) {
+		display: none;
+	}
+}
+
+
+// Show
+
+.show-md-up {
+	@include break($media-md+px) {
+		display: block;
+	}
+}
+
+.show-lg-up {
+	@include break($media-lg+px) {
+		display: block;
+	}
+}
+
+
+// Hide Range
+
+.hide-md-up {
+	@include break($media-lg+px) {
+		display: none;
+	}
+}
+
+.hide-lg-up {
+	@include break($media-lg+px) {
+		display: none;
+	}
+}
+
+
+
 // RESPONSIVE DATA TABLES
 // ----------------------
 

@@ -4403,6 +4403,7 @@ html {
   box-sizing: border-box;
   height: 100%;
   width: 100%;
+  opacity: 0;
   padding: 2.25rem;
   position: absolute;
   top: 0;
@@ -4411,11 +4412,11 @@ html {
   bottom: 0;
   visibility: hidden;
 }
-/* line 111, ../sass/partials/_styleguide.scss */
+/* line 112, ../sass/partials/_styleguide.scss */
 #tutorial-overlay.visible {
   visibility: visible;
 }
-/* line 115, ../sass/partials/_styleguide.scss */
+/* line 116, ../sass/partials/_styleguide.scss */
 #tutorial-overlay .island {
   margin: 0 auto;
   width: 800px;
