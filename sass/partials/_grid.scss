@@ -246,13 +246,13 @@ form {
 }
 
 .sm-trim-l {
-	@include break-range($media-md+px, $media-sm+px) {
+	@include break-range($media-md+px, 0px) {
 		padding-left: 0;
 	}
 }
 
 .sm-trim-r {
-	@include break-range($media-md+px, $media-sm+px) {
+	@include break-range($media-md+px, 0px) {
 		padding-right: 0;
 	}
 }
