@@ -1,0 +1,93 @@
+// TABS
+// ----
+
+.tab-titles {
+	@extend .no-bullets;
+	float: left;
+	margin: 0;
+	padding: 0;
+	position: relative;
+
+	li {
+		float: left;
+		background: $color-light;
+		border: 1px solid darken($color-light, 5%);
+		position: relative;
+		top: 2px;
+		
+		@include break($media-md+px) {
+			border: 0;
+		}
+
+		box-sizing: border-box;
+		cursor: default;
+		padding: $scale-b+rem;
+		width: 50%;
+
+		@include break($media-md+px) {
+			width: auto;
+		}
+
+		&.active {
+			background-color: #fff;
+			border: 1px solid $color-light;
+			border-bottom-color: #fff;
+		}
+
+		&:hover {
+			background-color: #fff;
+		}
+	}
+}
+
+.tab-container {
+	@extend %clearfix;
+	border: 1px solid $color-light;
+	box-sizing: border-box;
+	clear: both;
+	padding: $scale-4+rem;
+	@include break($media-md+px) {
+		padding: $scale-b+rem;
+	}
+}
+
+.tab-content {
+	display: none;
+
+	&.active {
+		display: block;
+	}
+
+	*:last-child {
+		margin-bottom: 0;
+	}
+}
+
+
+
+
+// VERTICAL TABS
+// -------------
+
+.tabs.vertical {
+	.tab-titles {
+		float: left;
+		top: 0;
+
+		li {
+			clear: left;
+			border: 0;
+			float: left;
+			height: auto;
+			width: 100%;
+
+			&.active {
+				border: 0;				
+			}
+		}
+	}
+
+	.tab-container {
+		border: 0;
+	}
+}

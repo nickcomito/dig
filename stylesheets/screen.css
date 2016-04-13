@@ -88,14 +88,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   text-align: center;
 }
 
-@media only screen and (max-width: 360px) and (min-width: 720px) {
+@media only screen and (max-width: 720px) and (min-width: 0) {
   /* line 39, ../sass/partials/_utilities.scss */
   .sm-text-center {
     text-align: center;
   }
 }
 
-@media only screen and (max-width: 360px) and (min-width: 720px) {
+@media only screen and (max-width: 1080px) and (min-width: 720px) {
   /* line 44, ../sass/partials/_utilities.scss */
   .md-text-center {
     text-align: center;
@@ -109,14 +109,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 }
 
-@media only screen and (max-width: 360px) and (min-width: 720px) {
+@media only screen and (max-width: 720px) and (min-width: 0) {
   /* line 55, ../sass/partials/_utilities.scss */
   .sm-text-left {
     text-align: left;
   }
 }
 
-@media only screen and (max-width: 360px) and (min-width: 720px) {
+@media only screen and (max-width: 1080px) and (min-width: 720px) {
   /* line 60, ../sass/partials/_utilities.scss */
   .md-text-left {
     text-align: left;
@@ -130,14 +130,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 }
 
-@media only screen and (max-width: 360px) and (min-width: 720px) {
+@media only screen and (max-width: 720px) and (min-width: 0) {
   /* line 71, ../sass/partials/_utilities.scss */
   .sm-text-right {
     text-align: right;
   }
 }
 
-@media only screen and (max-width: 720px) and (min-width: 1080px) {
+@media only screen and (max-width: 1080px) and (min-width: 720px) {
   /* line 76, ../sass/partials/_utilities.scss */
   .md-text-right {
     text-align: right;
@@ -373,7 +373,7 @@ thead, .uppercase {
 }
 
 /* line 196, ../sass/partials/_utilities.scss */
-.no-bullets {
+.no-bullets, .tab-titles {
   list-style: none;
 }
 
@@ -702,112 +702,119 @@ nav, .padbot-1 {
   clear: left;
 }
 
-/* line 294, ../sass/partials/_utilities.scss */
+/* line 292, ../sass/partials/_utilities.scss */
+.tab-container:after, .clearfix:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+/* line 301, ../sass/partials/_utilities.scss */
 .sm-left {
   float: left;
 }
 @media only screen and (min-width: 360px) {
-  /* line 294, ../sass/partials/_utilities.scss */
+  /* line 301, ../sass/partials/_utilities.scss */
   .sm-left {
     float: none;
   }
 }
 
-/* line 300, ../sass/partials/_utilities.scss */
+/* line 307, ../sass/partials/_utilities.scss */
 .sm-right {
   float: right;
 }
 @media only screen and (min-width: 360px) {
-  /* line 300, ../sass/partials/_utilities.scss */
+  /* line 307, ../sass/partials/_utilities.scss */
   .sm-right {
     float: none;
   }
 }
 
 @media only screen and (min-width: 720px) {
-  /* line 308, ../sass/partials/_utilities.scss */
+  /* line 315, ../sass/partials/_utilities.scss */
   .md-left {
     float: left;
   }
 }
 @media only screen and (min-width: 1080px) {
-  /* line 308, ../sass/partials/_utilities.scss */
+  /* line 315, ../sass/partials/_utilities.scss */
   .md-left {
     float: none;
   }
 }
 
 @media only screen and (min-width: 720px) {
-  /* line 316, ../sass/partials/_utilities.scss */
+  /* line 323, ../sass/partials/_utilities.scss */
   .md-right {
     float: right;
   }
 }
 @media only screen and (min-width: 1080px) {
-  /* line 316, ../sass/partials/_utilities.scss */
+  /* line 323, ../sass/partials/_utilities.scss */
   .md-right {
     float: none;
   }
 }
 
 @media only screen and (min-width: 1080px) {
-  /* line 326, ../sass/partials/_utilities.scss */
+  /* line 333, ../sass/partials/_utilities.scss */
   .lg-left {
     float: left;
   }
 }
 
 @media only screen and (min-width: 1080px) {
-  /* line 331, ../sass/partials/_utilities.scss */
+  /* line 338, ../sass/partials/_utilities.scss */
   .lg-right {
     float: right;
   }
 }
 
-/* line 338, ../sass/partials/_utilities.scss */
+/* line 345, ../sass/partials/_utilities.scss */
 .centered {
   float: none;
   margin-left: auto;
   margin-right: auto;
   width: 75%;
 }
-/* line 344, ../sass/partials/_utilities.scss */
+/* line 351, ../sass/partials/_utilities.scss */
 .centered.narrow {
   width: 45%;
 }
-/* line 348, ../sass/partials/_utilities.scss */
+/* line 355, ../sass/partials/_utilities.scss */
 .centered.normal {
   width: 60%;
 }
-/* line 352, ../sass/partials/_utilities.scss */
+/* line 359, ../sass/partials/_utilities.scss */
 .centered.wide {
   width: 90%;
 }
 
-/* line 364, ../sass/partials/_utilities.scss */
+/* line 371, ../sass/partials/_utilities.scss */
 input,
 select,
 textarea, fieldset, .rounded-1 {
   border-radius: 2px;
 }
 
-/* line 365, ../sass/partials/_utilities.scss */
+/* line 372, ../sass/partials/_utilities.scss */
 .rounded-2 {
   border-radius: 8px;
 }
 
-/* line 368, ../sass/partials/_utilities.scss */
+/* line 375, ../sass/partials/_utilities.scss */
 button.shadowed,
 .button.shadowed, .shadow-1 {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
 }
 
-/* line 369, ../sass/partials/_utilities.scss */
+/* line 376, ../sass/partials/_utilities.scss */
 .shadow-2 {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-/* line 370, ../sass/partials/_utilities.scss */
+/* line 377, ../sass/partials/_utilities.scss */
 .shadow-3 {
   box-shadow: 0 16px 16px rgba(0, 0, 0, 0.25);
 }
@@ -2969,7 +2976,73 @@ kbd {
   background-color: #8c4cbc;
 }
 
-/* line 386, ../sass/partials/_utilities.scss */
+/* line 396, ../sass/partials/_utilities.scss */
+.show-sm {
+  display: block;
+}
+
+@media only screen and (max-width: 1080px) and (min-width: 720px) {
+  /* line 400, ../sass/partials/_utilities.scss */
+  .show-md {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  /* line 406, ../sass/partials/_utilities.scss */
+  .show-lg {
+    display: block;
+  }
+}
+
+/* line 415, ../sass/partials/_utilities.scss */
+.hide-sm {
+  display: none;
+}
+
+@media only screen and (max-width: 1080px) and (min-width: 720px) {
+  /* line 419, ../sass/partials/_utilities.scss */
+  .hide-md {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  /* line 425, ../sass/partials/_utilities.scss */
+  .hide-lg {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 720px) {
+  /* line 434, ../sass/partials/_utilities.scss */
+  .show-md-up {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  /* line 440, ../sass/partials/_utilities.scss */
+  .show-lg-up {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  /* line 449, ../sass/partials/_utilities.scss */
+  .hide-md-up {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  /* line 455, ../sass/partials/_utilities.scss */
+  .hide-lg-up {
+    display: none;
+  }
+}
+
+/* line 466, ../sass/partials/_utilities.scss */
 table.responsive td span.inline-header {
   display: none;
 }
@@ -3570,14 +3643,14 @@ form .sm-4, form .md-4, form .lg-6 {
   }
 }
 
-@media only screen and (max-width: 720px) and (min-width: 360px) {
+@media only screen and (max-width: 720px) and (min-width: 0px) {
   /* line 248, ../sass/partials/_grid.scss */
   .sm-trim-l {
     padding-left: 0;
   }
 }
 
-@media only screen and (max-width: 720px) and (min-width: 360px) {
+@media only screen and (max-width: 720px) and (min-width: 0px) {
   /* line 254, ../sass/partials/_grid.scss */
   .sm-trim-r {
     padding-right: 0;
@@ -4160,7 +4233,6 @@ form .sm-4, form .md-4, form .lg-6 {
 /* line 66, ../sass/partials/_icons.scss */
 .icon-arrow-up:not(.svg) {
   background: url("../images/icon-arrow-up.svg");
-  border: 1px solid blue;
 }
 
 /* line 10, ../sass/partials/_type.scss */
@@ -4890,7 +4962,7 @@ table {
   table.responsive {
     width: 100%;
   }
-  /* line 392, ../sass/partials/_utilities.scss */
+  /* line 472, ../sass/partials/_utilities.scss */
   table.responsive thead,
   table.responsive tbody,
   table.responsive th,
@@ -4898,33 +4970,33 @@ table {
   table.responsive tr {
     display: block;
   }
-  /* line 397, ../sass/partials/_utilities.scss */
+  /* line 477, ../sass/partials/_utilities.scss */
   table.responsive thead tr {
     left: -9999px;
     position: absolute;
     top: -9999px;
   }
-  /* line 403, ../sass/partials/_utilities.scss */
+  /* line 483, ../sass/partials/_utilities.scss */
   table.responsive tbody tr {
     padding: 1rem 0;
     border-bottom: 1px solid #E2E2E2;
   }
-  /* line 404, ../sass/partials/_utilities.scss */
+  /* line 484, ../sass/partials/_utilities.scss */
   table.responsive tbody td {
     border: 0;
     padding: 0.33333rem 0;
     position: relative;
     clear: both;
   }
-  /* line 414, ../sass/partials/_utilities.scss */
+  /* line 494, ../sass/partials/_utilities.scss */
   table.responsive tfoot td {
     padding: 0.33333rem 0;
   }
-  /* line 417, ../sass/partials/_utilities.scss */
+  /* line 497, ../sass/partials/_utilities.scss */
   table.responsive tfoot td:last-child {
     padding-bottom: 0;
   }
-  /* line 423, ../sass/partials/_utilities.scss */
+  /* line 503, ../sass/partials/_utilities.scss */
   table.responsive td span.inline-header {
     color: #929292;
     display: block;
@@ -5157,6 +5229,97 @@ th p, td p {
 /* line 17, ../sass/partials/patterns/_pattern_popup.scss */
 .popup.active {
   z-index: 1000;
+}
+
+/* line 4, ../sass/partials/patterns/_pattern_tabs.scss */
+.tab-titles {
+  float: left;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+/* line 11, ../sass/partials/patterns/_pattern_tabs.scss */
+.tab-titles li {
+  float: left;
+  background: #E2E2E2;
+  border: 1px solid #d5d5d5;
+  position: relative;
+  top: 2px;
+  box-sizing: border-box;
+  cursor: default;
+  padding: 1rem;
+  width: 50%;
+}
+@media only screen and (min-width: 720px) {
+  /* line 11, ../sass/partials/patterns/_pattern_tabs.scss */
+  .tab-titles li {
+    border: 0;
+  }
+}
+@media only screen and (min-width: 720px) {
+  /* line 11, ../sass/partials/patterns/_pattern_tabs.scss */
+  .tab-titles li {
+    width: auto;
+  }
+}
+/* line 31, ../sass/partials/patterns/_pattern_tabs.scss */
+.tab-titles li.active {
+  background-color: #fff;
+  border: 1px solid #E2E2E2;
+  border-bottom-color: #fff;
+}
+/* line 37, ../sass/partials/patterns/_pattern_tabs.scss */
+.tab-titles li:hover {
+  background-color: #fff;
+}
+
+/* line 43, ../sass/partials/patterns/_pattern_tabs.scss */
+.tab-container {
+  border: 1px solid #E2E2E2;
+  box-sizing: border-box;
+  clear: both;
+  padding: 0.444rem;
+}
+@media only screen and (min-width: 720px) {
+  /* line 43, ../sass/partials/patterns/_pattern_tabs.scss */
+  .tab-container {
+    padding: 1rem;
+  }
+}
+
+/* line 54, ../sass/partials/patterns/_pattern_tabs.scss */
+.tab-content {
+  display: none;
+}
+/* line 57, ../sass/partials/patterns/_pattern_tabs.scss */
+.tab-content.active {
+  display: block;
+}
+/* line 61, ../sass/partials/patterns/_pattern_tabs.scss */
+.tab-content *:last-child {
+  margin-bottom: 0;
+}
+
+/* line 73, ../sass/partials/patterns/_pattern_tabs.scss */
+.tabs.vertical .tab-titles {
+  float: left;
+  top: 0;
+}
+/* line 77, ../sass/partials/patterns/_pattern_tabs.scss */
+.tabs.vertical .tab-titles li {
+  clear: left;
+  border: 0;
+  float: left;
+  height: auto;
+  width: 100%;
+}
+/* line 84, ../sass/partials/patterns/_pattern_tabs.scss */
+.tabs.vertical .tab-titles li.active {
+  border: 0;
+}
+/* line 90, ../sass/partials/patterns/_pattern_tabs.scss */
+.tabs.vertical .tab-container {
+  border: 0;
 }
 
 /* line 6, ../sass/partials/_override_progress-bar.scss */

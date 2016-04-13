@@ -3,15 +3,15 @@
 
 	<head>
 		<title>Sample</title>	
-	  <link rel="stylesheet" href="stylesheets/screen.css">
-	  <script data-main="js/ui.js" src="js/require.js"></script>
+	  <?php include('includes/stylesheets.inc'); ?>
+    <?php include('includes/meta.inc'); ?>
 	</head>
 
 	<body>
 		<div class="bgcolor-dark padall-2">
 			<div class="contain">
 				<div class="sm-4 md-8 lg-10 centered color-light">
-					<a href="index.html">&laquo; Go home</a><p class="margbot-0">Hey there, Nick. Welcome to your dashboard.</p>
+					<a href="index.php">&laquo; Go home</a><p class="margbot-0">Hey there, Nick. Welcome to your dashboard.</p>
 				</div>
 			</div>
 		</div>
@@ -119,5 +119,6 @@
 				<p>Curabitur blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
 			</div>
 		</div>
+		<?php include('includes/scripts.inc'); ?>
 	</body>
 </html>

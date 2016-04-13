@@ -9,17 +9,7 @@
     <div class="contain">
       <div class="row">
         <div class="sm-4 md-8 lg-9 centered">
-          <nav>
-            <a href="index.html">&laquo; Home</a>
-            <a href="scale.html">Scale</a>
-            <a href="grid.html">Grid</a>
-            <a href="type.html">Type</a>
-            <a href="tone.html">Tone</a>
-            <a href="color.html">Color</a>
-            <a href="icons.html">Icons</a>
-            <a href="animation.html">Animation</a>
-            <a href="patterns.html">Patterns</a>
-          </nav>
+          <?php include('includes/nav_style.inc'); ?>
         </div>
       </div>
       <div class="sm-4 md-8 lg-9 centered">
@@ -60,5 +50,6 @@
     <div id="tutorial-overlay">
       <div class="island"><iframe src="https://player.vimeo.com/video/14396098" width="800" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
     </div>
+    <?php include('includes/scripts.inc'); ?>
   </body>
 </html>

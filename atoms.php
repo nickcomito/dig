@@ -9,12 +9,7 @@
     <div class="contain">
       <div class="row">
         <div class="sm-4 md-8 lg-8 lg-centered">
-          <nav>
-            <a href="index.html">&laquo; Home</a>
-            <a href="atoms.html">Atoms</a>
-            <a href="molecules.html">Molecules</a>
-            <a href="organisms.html">Organisms</a>
-          </nav>
+          <?php include('includes/nav_atomic.inc'); ?>
         </div>
       </div>
       <div class="row">
@@ -274,5 +269,6 @@ pre {
     <div id="tutorial-overlay">
       <div class="island"><iframe src="https://player.vimeo.com/video/14396098" width="800" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
     </div>
+    <?php include('includes/scripts.inc'); ?>
   </body>
 </html>

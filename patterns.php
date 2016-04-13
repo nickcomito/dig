@@ -2,30 +2,23 @@
 <html class="no-js" lang="en">
   <head>
     <title>Patterns</title>
-    <link rel="stylesheet" href="stylesheets/screen.css">
-    <script data-main="js/ui.js" src="js/require.js"></script>
+    <?php include('includes/stylesheets.inc'); ?>
+    <?php include('includes/meta.inc'); ?>
   </head>
   <body>
     <div class="contain">
       <div class="row">
         <div class="sm-4 md-8 lg-9 centered">
           <nav>
-            <a href="index.html">&laquo; Home</a>
-            <a href="scale.html">Scale</a>
-            <a href="grid.html">Grid</a>
-            <a href="type.html">Type</a>
-            <a href="tone.html">Tone</a>
-            <a href="color.html">Color</a>
-            <a href="icons.html">Icons</a>
-            <a href="animation.html">Animation</a>
-            <a href="patterns.html">Patterns</a>
+            <a href="index.php">&laquo; Home</a>
           </nav>
         </div>
       </div>
       <div class="sm-4 md-8 lg-9 centered">
         <hr>
         <a id="tutorial-trigger" class="right">tutorial</a>
-        <h1 class="margbot-5">Patterns</h1>
+        <h1>Patterns</h1>
+        <p class="margbot-4">Common interface elements that you can reuse and override</p>
       </div>
       <div class="sm-4 md-8 lg-9 lg-centered">
         <div class="pattern">
@@ -133,6 +126,45 @@
         </div>
 
         <div class="pattern">
+          <span class="title">Tabs</span>
+          <div class="tabs">
+            <ul class="tab-titles">
+              <li class="tab active" data-tab="tab-1">Tab 1</li>
+              <li class="tab" data-tab="tab-2">Tab 2</li>
+              <li class="tab" data-tab="tab-3">Tab 3</li>
+              <li class="tab" data-tab="tab-4">Tab 4</li>
+              <li class="tab" data-tab="tab-5">Tab 5</li>
+            </ul>
+            <div class="tab-container">
+              <div class="tab-content active" id="tab-1">
+                <h2>Tab 1</h2>
+                <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas faucibus mollis interdum. Aenean lacinia bibendum nulla sed consectetur. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+              </div>
+
+              <div class="tab-content" id="tab-2">
+                <h2>Tab 2</h2>
+                <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas faucibus mollis interdum. Aenean lacinia bibendum nulla sed consectetur. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+              </div>
+
+              <div class="tab-content" id="tab-3">
+                <h2>Tab 3</h2>
+                <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas faucibus mollis interdum. Aenean lacinia bibendum nulla sed consectetur. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+              </div>
+
+              <div class="tab-content" id="tab-4">
+                <h2>Tab 4</h2>
+                <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas faucibus mollis interdum. Aenean lacinia bibendum nulla sed consectetur. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+              </div>
+
+              <div class="tab-content" id="tab-5">
+                <h2>Tab 5</h2>
+                <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas faucibus mollis interdum. Aenean lacinia bibendum nulla sed consectetur. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pattern">
           <span class="title">Pagination</span>
           <div class="pagination">
             <ul>
@@ -149,7 +181,8 @@
       </div>
     </div>
     <div id="tutorial-overlay">
-      <div class="island"><iframe src="https://player.vimeo.com/video/14396098" width="800" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+      <!-- <div class="island"><iframe src="https://player.vimeo.com/video/14396098" width="800" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div> -->
     </div>
+    <?php include('includes/scripts.inc'); ?>
   </body>
 </html>

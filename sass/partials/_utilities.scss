@@ -288,6 +288,13 @@
 %clear, .clear { clear: both }
 %clear-r, .clear-r { clear: right }
 %clear-l, .clear-l { clear: left }
+%clearfix, .clearfix {
+	&:after {
+		clear: both;
+		content: '';
+		display: table;
+	}
+}
 
 
 // Float on small
