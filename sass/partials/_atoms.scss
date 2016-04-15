@@ -190,6 +190,7 @@ textarea {
   font-family: $font-secondary;
   font-size: $scale-b+rem; 
   font-weight: bold;
+  height: $scale4+rem;
   margin-bottom: $scale-1+rem;
   padding: $scale-3+rem;
   width: 100%;
@@ -223,13 +224,6 @@ textarea {
   
 }
 
-input[type="checkbox"] {
-  float: left;
-  line-height: 24px;
-  margin: $scale-6+rem $scale-2+rem 0 0;
-  padding: 0;
-  width: auto;
-}
 
 
 // Buttons

@@ -48,6 +48,15 @@ $(document).ready(function() {
     $(this).addClass('active');
     $("#"+tab_id).addClass('active');
   });
+
+
+
+
+  // EDE
+  // ---
+  ede_setup();
+
+
 });
 
 
@@ -106,6 +115,38 @@ svg_replace = function(element) {
     }, 'xml');
   })
 };
+
+
+
+
+// EDE
+// ---
+
+ede_setup = function() {
+  
+
+  $('form.ede div').each(function(){
+    var label = $(this).attr('data-label');
+    var id = $(this).attr('id');
+    var label_for = $(this).attr('name');
+
+    if ( label.length > 40 ) {
+      $(this).addClass("no-border");
+    }
+  });
+
+  $('form.ede :input').each(function(){
+    var label = $(this).attr('data-label');
+    var id = $(this).attr('id');
+    var label_for = $(this).attr('name');
+
+    if ( label ) {
+      $(this).after("<label for='" + id +"'>" + label + "</label>");  
+    }
+  });
+
+  // checkboxes.after()
+}
 
 
 

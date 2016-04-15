@@ -1,0 +1,172 @@
+.ede {
+
+  // Set container widths
+  .xl input { width: 100% }
+  .lg input { width: 75%; float: right; }
+  .md input { width: 50%; float: right; }
+  .sm input { width: 25%; float: right; }
+  .xs input { width: 15%; float: right; }
+
+
+  // Dynamic form labels and connection
+
+  .xl, .lg, .md, .sm, .xs {
+    clear: both;
+    float: left;
+    margin-bottom: $scale-b/2+rem;
+    position: relative;
+    width: 100%;
+    z-index: 100;
+
+    // Label Injection
+    &:before {
+      @extend label;
+      border-bottom: 1px solid #e1e1e1;
+      content: attr(data-label);
+      float: left;
+      position: relative;
+      top: -5px;
+      width: 75%;
+    }
+
+    // Label -> Input Connector
+    &:after {
+      @extend %rounded-1;
+      background: #e1e1e1;
+      content: "";
+      display: block;
+      height: $scale4+rem;
+      margin: 0;
+      padding: 3px;
+      position: absolute;
+      right: -3px;
+      top: -3px;
+      z-index: -1;
+    }
+
+    &.no-border:before {
+      border: 0;
+      box-sizing: border-box;
+      line-height: 1.25;
+      margin-bottom: $scale2+rem;
+      padding-right: $scale2+rem;
+    }
+
+    &.radio,
+    &.checkbox {
+      margin-bottom: $scale1+rem;
+
+      input {
+        clear: left;
+        float: left;
+        height: auto;
+        margin-bottom: $scale1/2+rem;
+        margin-right: $scale1/2+rem;
+        width: auto;
+      }
+
+      label {
+        float: left;
+      }
+
+      &:before {
+        display: block;
+        margin-bottom: 10px;
+        width: 100%;
+      }
+
+      &:after {
+        display: none;
+      }
+    }
+
+    &.xl:after {
+      top: 18px;
+      width: 100%;
+    }
+
+    &[data-label=""]:before,
+    &[data-label="none"]:before,
+    &[data-label="null"]:before {
+      border: 0;
+      content: "";
+    }
+
+    &[data-label=""]:after,
+    &[data-label="none"]:after,
+    &[data-label="null"]:after {
+      top: -3px;
+    }
+  }
+
+
+  // Label Adjustments
+
+  .xl:before { 
+    float: none;
+    top: 0;
+  }
+
+  .lg:before {
+    width: 25%;
+  }
+
+  .md:before {
+    width: 50%;
+  }
+
+  .sm:before {
+    width: 75%;
+  }
+
+  .xs:before {
+    width: 85%;
+  }
+
+
+  // Connector Adjustments
+
+  .lg:after {
+    width: 75%;
+  }
+
+  .md:after {
+    width: 50%;
+  }
+
+  .sm:after {
+    width: 25%;
+  }
+
+  .xs:after {
+    width: 15%;
+  }
+
+  &.unstyled {
+    .xl, .lg, .md,  .sm, .xs {
+
+      // Label -> Input Connector
+      &:after {
+        display: none;
+      }
+
+      &:before {
+        border: 0;
+        top: 5px;
+        width: 25%;
+      }
+
+      input {
+        float: left;
+      }
+    }
+
+    .xl input {
+      margin-top: 5px;
+    }
+
+    .xl:after, .lg:after {
+      background: 0;
+    }
+  }
+}
