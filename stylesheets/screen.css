@@ -5533,6 +5533,31 @@ nav.expanded a:last-child {
   padding-right: 0.667rem;
 }
 
+/* line 7, ../sass/partials/patterns/_pattern_pagination.scss */
+.pagination ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 12, ../sass/partials/patterns/_pattern_pagination.scss */
+.pagination li {
+  display: inline;
+}
+/* line 15, ../sass/partials/patterns/_pattern_pagination.scss */
+.pagination li.active a {
+  background: #E2E2E2;
+}
+/* line 20, ../sass/partials/patterns/_pattern_pagination.scss */
+.pagination a {
+  border: 1px solid transparent;
+  display: inline-block;
+  padding: 0.317rem 0.667rem;
+}
+/* line 25, ../sass/partials/patterns/_pattern_pagination.scss */
+.pagination a:hover {
+  border-color: #E2E2E2;
+  text-decoration: none;
+}
+
 /* line 6, ../sass/partials/_override_progress-bar.scss */
 .progress-bar {
   height: 2.25rem;

@@ -1,0 +1,30 @@
+
+// PAGINATION
+// ----------
+
+
+.pagination {
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+
+	li {
+		display: inline;
+
+		&.active a {
+			background: $color-light;
+		}
+	}
+
+	a {
+		border: 1px solid transparent;
+		display: inline-block;
+		padding: $scale-6+rem $scale-2+rem ;
+
+		&:hover {
+			border-color: $color-light;
+			text-decoration: none;
+		}
+	}
+}

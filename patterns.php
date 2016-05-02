@@ -61,7 +61,7 @@
           <span class="title">Login Form</span>
           <div class="login-form">
             <form class="ede">
-              <div class="xl" data-label="Enter your email address">
+              <div class="xl">
                 <input type="email" placeholder="Email">
               </div>
               <div class="xl">
@@ -189,12 +189,12 @@
           <div class="pagination">
             <ul>
               <li><a href="#">&laquo;</a></li>
-              <li class="active">1</li>
-              <li><a href="#">2</a></li>
-              <li><a href="#">3</a></li>
-              <li><a href="#">4</a></li>
-              <li><a href="#">5</a></li>
-              <li><a href="#">&raquo;</a></li>
+              <li class="active"><a href="#!">1</a></li>
+              <li><a href="#!">2</a></li>
+              <li><a href="#!">3</a></li>
+              <li><a href="#!">4</a></li>
+              <li><a href="#!">5</a></li>
+              <li><a href="#!">&raquo;</a></li>
             </ul>
           </div>
         </div>
