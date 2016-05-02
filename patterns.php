@@ -43,6 +43,21 @@
         </div>
 
         <div class="pattern">
+          <span class="title">Header</span>
+          <header class="global-header clearfix">            
+            <a href="#!" class="button outline right hide-lg-up" id="menu-toggle">Menu</a>
+            <a href="#!"><h1 class="logo left">Logo</h1></a>
+          
+            <nav class="primary hide-sm hide-md show-lg-up right">
+              <a href="#!">About Us</a>
+              <a href="#!">Our Services</a>
+              <a href="#!">Generic Page</a>
+              <a href="#!">Contact Us</a>
+            </nav>
+          </header>
+        </div>
+
+        <div class="pattern">
           <span class="title">Login Form</span>
           <div class="login-form">
             <form>

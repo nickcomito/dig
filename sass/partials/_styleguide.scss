@@ -31,6 +31,14 @@
 	position: relative;
 }
 
+.rgb {
+	&:after {
+		clear: both;
+		content: $color-primary;
+		display: block;
+	}
+}
+
 .scale-box {
 	@extend %margbot-2;
 	@extend %bgcolor-subtle-alt;

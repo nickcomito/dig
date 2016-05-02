@@ -799,7 +799,7 @@ textarea, fieldset, .rounded-1 {
 }
 
 /* line 374, ../sass/partials/_utilities.scss */
-.rounded-2 {
+nav.expanded a.active, .rounded-2 {
   border-radius: 8px;
 }
 
@@ -4519,81 +4519,88 @@ html {
   position: relative;
 }
 
-/* line 34, ../sass/partials/_styleguide.scss */
+/* line 35, ../sass/partials/_styleguide.scss */
+.rgb:after {
+  clear: both;
+  content: #2ebe94;
+  display: block;
+}
+
+/* line 42, ../sass/partials/_styleguide.scss */
 .scale-box {
   display: block;
   width: 100%;
 }
-/* line 40, ../sass/partials/_styleguide.scss */
+/* line 48, ../sass/partials/_styleguide.scss */
 .scale-box.scale-6 {
   height: 0.317rem;
 }
-/* line 41, ../sass/partials/_styleguide.scss */
+/* line 49, ../sass/partials/_styleguide.scss */
 .scale-box.scale-5 {
   height: 0.422rem;
 }
-/* line 42, ../sass/partials/_styleguide.scss */
+/* line 50, ../sass/partials/_styleguide.scss */
 .scale-box.scale-4 {
   height: 0.444rem;
 }
-/* line 43, ../sass/partials/_styleguide.scss */
+/* line 51, ../sass/partials/_styleguide.scss */
 .scale-box.scale-3 {
   height: 0.563rem;
 }
-/* line 44, ../sass/partials/_styleguide.scss */
+/* line 52, ../sass/partials/_styleguide.scss */
 .scale-box.scale-2 {
   height: 0.667rem;
 }
-/* line 45, ../sass/partials/_styleguide.scss */
+/* line 53, ../sass/partials/_styleguide.scss */
 .scale-box.scale-1 {
   height: 0.75rem;
 }
-/* line 46, ../sass/partials/_styleguide.scss */
+/* line 54, ../sass/partials/_styleguide.scss */
 .scale-box.scale-b {
   height: 1rem;
 }
-/* line 47, ../sass/partials/_styleguide.scss */
+/* line 55, ../sass/partials/_styleguide.scss */
 .scale-box.scale1 {
   height: 1.333rem;
 }
-/* line 48, ../sass/partials/_styleguide.scss */
+/* line 56, ../sass/partials/_styleguide.scss */
 .scale-box.scale1 {
   height: 1.333rem;
 }
-/* line 49, ../sass/partials/_styleguide.scss */
+/* line 57, ../sass/partials/_styleguide.scss */
 .scale-box.scale2 {
   height: 1.5rem;
 }
-/* line 50, ../sass/partials/_styleguide.scss */
+/* line 58, ../sass/partials/_styleguide.scss */
 .scale-box.scale3 {
   height: 1.777rem;
 }
-/* line 51, ../sass/partials/_styleguide.scss */
+/* line 59, ../sass/partials/_styleguide.scss */
 .scale-box.scale4 {
   height: 2.25rem;
 }
-/* line 52, ../sass/partials/_styleguide.scss */
+/* line 60, ../sass/partials/_styleguide.scss */
 .scale-box.scale5 {
   height: 2.369rem;
 }
-/* line 53, ../sass/partials/_styleguide.scss */
+/* line 61, ../sass/partials/_styleguide.scss */
 .scale-box.scale6 {
   height: 3.157rem;
 }
-/* line 54, ../sass/partials/_styleguide.scss */
+/* line 62, ../sass/partials/_styleguide.scss */
 .scale-box.scale7 {
   height: 3.375rem;
 }
-/* line 55, ../sass/partials/_styleguide.scss */
+/* line 63, ../sass/partials/_styleguide.scss */
 .scale-box.scale8 {
   height: 4.209rem;
 }
-/* line 56, ../sass/partials/_styleguide.scss */
+/* line 64, ../sass/partials/_styleguide.scss */
 .scale-box.scale9 {
   height: 5.063rem;
 }
 
-/* line 59, ../sass/partials/_styleguide.scss */
+/* line 67, ../sass/partials/_styleguide.scss */
 .title {
   border-bottom: 2px solid #f1f1f1;
   color: #999;
@@ -4602,38 +4609,38 @@ html {
   margin-bottom: 5px;
 }
 
-/* line 67, ../sass/partials/_styleguide.scss */
+/* line 75, ../sass/partials/_styleguide.scss */
 .swatch {
   box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 0.2);
   height: 1.5rem;
   width: 1.333rem;
 }
-/* line 75, ../sass/partials/_styleguide.scss */
+/* line 83, ../sass/partials/_styleguide.scss */
 .swatch.main {
   box-shadow: none;
   border: 0;
   height: 4.209rem;
   width: 5.063rem;
 }
-/* line 83, ../sass/partials/_styleguide.scss */
+/* line 91, ../sass/partials/_styleguide.scss */
 .swatch.example {
   height: 1.5rem;
   margin-right: 1rem;
   width: 5.063rem;
 }
 
-/* line 91, ../sass/partials/_styleguide.scss */
+/* line 99, ../sass/partials/_styleguide.scss */
 .variations {
   clear: left;
 }
 @media only screen and (min-width: 720px) {
-  /* line 91, ../sass/partials/_styleguide.scss */
+  /* line 99, ../sass/partials/_styleguide.scss */
   .variations {
     clear: none;
   }
 }
 
-/* line 98, ../sass/partials/_styleguide.scss */
+/* line 106, ../sass/partials/_styleguide.scss */
 #tutorial-overlay {
   background: rgba(255, 255, 255, 0.8);
   box-sizing: border-box;
@@ -4648,11 +4655,11 @@ html {
   bottom: 0;
   visibility: hidden;
 }
-/* line 112, ../sass/partials/_styleguide.scss */
+/* line 120, ../sass/partials/_styleguide.scss */
 #tutorial-overlay.visible {
   visibility: visible;
 }
-/* line 116, ../sass/partials/_styleguide.scss */
+/* line 124, ../sass/partials/_styleguide.scss */
 #tutorial-overlay .island {
   margin: 0 auto;
   width: 800px;
@@ -5476,6 +5483,55 @@ th p, td p {
 /* line 90, ../sass/partials/patterns/_pattern_tabs.scss */
 .tabs.vertical .tab-container {
   border: 0;
+}
+
+/* line 8, ../sass/partials/patterns/_pattern_header.scss */
+nav.primary {
+  width: auto;
+}
+
+/* line 15, ../sass/partials/patterns/_pattern_header.scss */
+nav.expanded {
+  background: #2ebe94;
+  box-sizing: border-box;
+  display: block;
+  padding: 0 0.667rem;
+  width: 100%;
+  z-index: 500;
+}
+@media only screen and (min-width: 720px) {
+  /* line 15, ../sass/partials/patterns/_pattern_header.scss */
+  nav.expanded {
+    position: absolute;
+    right: 16px;
+    width: auto;
+  }
+}
+/* line 29, ../sass/partials/patterns/_pattern_header.scss */
+nav.expanded a {
+  display: block;
+  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+  color: #fff;
+}
+@media only screen and (max-width: 1080px) and (min-width: 0) {
+  /* line 29, ../sass/partials/patterns/_pattern_header.scss */
+  nav.expanded a {
+    padding: 0.667rem;
+  }
+}
+/* line 39, ../sass/partials/patterns/_pattern_header.scss */
+nav.expanded a.active {
+  background: #249574;
+  color: #575757;
+}
+/* line 45, ../sass/partials/patterns/_pattern_header.scss */
+nav.expanded a:first-child {
+  padding-left: 0.667rem;
+}
+/* line 49, ../sass/partials/patterns/_pattern_header.scss */
+nav.expanded a:last-child {
+  padding-right: 0.667rem;
 }
 
 /* line 6, ../sass/partials/_override_progress-bar.scss */
