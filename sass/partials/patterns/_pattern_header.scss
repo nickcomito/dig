@@ -1,0 +1,53 @@
+
+// NAVIGATION
+// ----------
+
+
+// Primary
+
+nav.primary {
+	width: auto;
+}
+
+
+// Expanded
+
+nav.expanded {
+	background: $color-primary;
+	box-sizing: border-box;
+	display: block;
+	padding: 0 $scale-2+rem;
+	width: 100%;
+	z-index: 500;
+
+	@include break($media-md+px) {
+		position: absolute;
+		right: $gutter+px;
+		width: auto;
+	}
+
+	a {
+		display: block;
+		border-bottom: 1px solid #fff;// For browsers that don't support RGBA
+		border-bottom: 1px solid rgba(255,255,255,.24);
+		color: #fff;
+
+		@include break-range($media-lg+px, 0) {
+			padding: $scale-2+rem;
+		}
+
+		&.active {
+			@extend %rounded-2;
+			background: darken($color-primary, 10%);
+			color: $color-dark;
+		}
+
+		&:first-child {
+			padding-left: $scale-2+rem;
+		}
+
+		&:last-child {
+			padding-right: $scale-2+rem;
+		}
+	}
+}
