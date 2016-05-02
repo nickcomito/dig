@@ -60,13 +60,18 @@
         <div class="pattern">
           <span class="title">Login Form</span>
           <div class="login-form">
-            <form>
-              <input type="email" placeholder="Email">
-              <input type="password" placeholder="Password">
-              <div class="input-row padbot-1">
-                <input type="checkbox" id="accept">
-                <label for="accept">I accept the <a href="">terms &amp; conditions</a></label>
+            <form class="ede">
+              <div class="xl" data-label="Enter your email address">
+                <input type="email" placeholder="Email">
               </div>
+              <div class="xl">
+                <input type="password" placeholder="Password">
+              </div>
+
+              <div class="xl checkbox">
+                <input type="checkbox" name="terms" id="terms-cond" data-label="I accept the terms &amp; conditions">
+              </div>
+
               <button class="sm-expand">Log In</button>
             </form>
             <div class="form-support">

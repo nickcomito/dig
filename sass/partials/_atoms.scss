@@ -220,6 +220,11 @@ select {
   background-size: $scale-2+rem;
 }
 
+input[type="checkbox"],
+input[type="radio"] {
+  
+}
+
 textarea {
   
 }

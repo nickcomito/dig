@@ -19,7 +19,7 @@
     z-index: 100;
 
     // Label Injection
-    &:before {
+    &.label-inject:before {
       @extend label;
       border-bottom: 1px solid #e1e1e1;
       content: attr(data-label);
@@ -30,7 +30,7 @@
     }
 
     // Label -> Input Connector
-    &:after {
+    &.label-inject:after {
       @extend %rounded-1;
       background: #e1e1e1;
       content: "";
@@ -59,10 +59,9 @@
       input {
         clear: left;
         float: left;
-        height: auto;
-        margin-bottom: $scale1/2+rem;
-        margin-right: $scale1/2+rem;
-        width: auto;
+        height: $scale1+rem;
+        margin-top: 4px;
+        width: $scale1+rem;
       }
 
       label {

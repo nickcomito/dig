@@ -135,8 +135,12 @@ ede_setup = function() {
     var id = $(this).attr('id');
     var label_for = $(this).attr('name');
 
-    if ( label.length > 40 ) {
+    if ( label && label.length > 40 ) {
       $(this).addClass("no-border");
+    }
+
+    if ( label && label.length > 0 ) {
+      $(this).addClass("label-inject");
     }
   });
 
