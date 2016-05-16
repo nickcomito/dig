@@ -5031,6 +5031,11 @@ img {
   max-width: 100%;
 }
 
+/* line 377, ../sass/partials/_atoms.scss */
+i {
+  font-family: 'Material Icons';
+}
+
 /* line 20, ../sass/partials/_molecules.scss */
 fieldset {
   border: 1px solid #E2E2E2;
