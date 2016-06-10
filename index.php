@@ -12,7 +12,7 @@
 				<div class="row">
 					<hgroup class="margtop-2">
 						<h1>Dynamic UI Guide</h1>
-						<h4 class="font-secondary margbot-2">Project: <strong>Example</strong> &mdash; <a id="tutorial-trigger">Introduction</a></h4>
+						<h4 class="font-secondary margbot-2">Project: <strong>Example</strong></h4>
 					</hgroup>
 				</div>
 
@@ -51,9 +51,6 @@
 				</footer>
 			</div>
 		</div>
-		<div id="tutorial-overlay">
-      <div class="island"><iframe src="https://player.vimeo.com/video/14396098" width="800" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-    </div>
     <?php include('includes/scripts.inc'); ?>
 	</body>
 </html>

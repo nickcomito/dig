@@ -14,7 +14,6 @@
       </div>
       <div class="sm-4 md-8 lg-9 centered">
         <hr>
-        <a id="tutorial-trigger" class="right">tutorial</a>
         <h1 class="margbot-5">Color</h1>
       </div>
 

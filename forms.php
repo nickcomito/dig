@@ -60,9 +60,6 @@
 			</div>
 		</div>	
 	</div>
-	<div id="tutorial-overlay">
-    <div class="island"><iframe src="https://player.vimeo.com/video/14396098" width="800" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-  </div>
   <?php include('includes/scripts.inc'); ?>
 </body>
 
