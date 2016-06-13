@@ -1,9 +1,9 @@
 <!doctype html>
 <html class="no-js" lang="en">
   <head>
-    <title>Atoms</title>
-    <link rel="stylesheet" href="stylesheets/screen.css">
-    <script data-main="js/ui.js" src="js/require.js"></script>
+    <title>Molecules</title>
+    <?php include('includes/stylesheets.inc'); ?>
+    <?php include('includes/meta.inc'); ?>
   </head>
   <body>
     <div class="contain">
