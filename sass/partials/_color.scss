@@ -70,10 +70,18 @@
 
 // Gradient from top (default white) to bottom (default black)
 @mixin gradient-tb($top: #fff, $bottom: #000) {
-  @include background(linear-gradient(top, $top, $bottom));
+	background: $top; /* Old browsers */
+	background: -moz-linear-gradient(top, $top 0%, $bottom 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, $top 0%, $bottom 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  $top 0%, $bottom 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$top', endColorstr='$bottom',GradientType=0 ); /* IE6-9 */
 }
 
 // Gradient from left (default white) to right (default black)
 @mixin gradient-lr($left: #fff, $right: #000) {
-  @include background(linear-gradient(left, $left, $right));
+	background: $left; /* Old browsers */
+	background: -moz-linear-gradient(left, $left 0%,$right 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, $left 0%, $right 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, $left 0%, $right 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$left', endColorstr='$right',GradientType=1 ); /* IE6-9 */
 }
